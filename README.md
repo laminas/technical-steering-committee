@@ -6,7 +6,7 @@ Technical Steering Committee.
 This repository contains the following:
 
 - [List of current TSC members](MAINTAINERS.md).
-- [By-laws/processes](proceses/)
+- [By-laws/processes](processes/)
 - Meeting agendas
 - Voting records
 - Accepted RFCs
