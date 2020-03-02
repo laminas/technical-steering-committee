@@ -19,3 +19,12 @@ discuss items to add, to the agenda.
 * MVC Support - Active Development?
 * Roadmap for components
 * Doctrine integration
+* Major release community guideline
+  * Breaking change review and approval process
+  * Time constraints between major releases
+  * What should be considered a minimal change to warrant major release
+  * Soft upper time limit for how long major release can be postponed to wait
+    for more major targeting features to be completed
+  * Overall stance on breaking non-feature changes aimed at improving code and
+    design quality. Signature changes, adoption of new language features.
+  * Feature deprecation and removal timeframe
