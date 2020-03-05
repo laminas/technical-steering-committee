@@ -1,6 +1,6 @@
 # Technical Steering Committee Members
 
-- Last updated: 2020-01-06
+- Last updated: 2020-03-05
 
 - Rob Allen (@akrabat)
 - Frank Brückner (@froschdesign)
