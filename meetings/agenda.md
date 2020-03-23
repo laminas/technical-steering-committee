@@ -20,3 +20,5 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - @weierophinney has setup the security@getlaminas.org email, but we need a
     new security group, as the bulk of those previously on it are either inactive
     or left the TSC. Who should get these emails?
+- Vote on new members:
+  - [Abdul Malik Ikhsan @samsonasik](https://github.com/samsonasik) (nominated by @weierophinney)
