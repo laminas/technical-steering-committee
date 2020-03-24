@@ -23,4 +23,5 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 - Vote on new members:
   - [Abdul Malik Ikhsan (@samsonasik)](https://github.com/samsonasik) (nominated by @weierophinney)
   - [Luís Cobucci (@lcobucci)](https://github.com/lcobucci) (nominated by @weierophinney)
+  - [Maximilian Bösing (@boesing)](https://github.com/boesing) (nominated by @weierophinney)
   - [Witold Wasiczko (@snapshotpl)](https://github.com/snapshotpl) (nominated by @weierophinney)
