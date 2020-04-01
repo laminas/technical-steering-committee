@@ -25,3 +25,9 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - [Luís Cobucci (@lcobucci)](https://github.com/lcobucci) (nominated by @weierophinney)
   - [Maximilian Bösing (@boesing)](https://github.com/boesing) (nominated by @weierophinney)
   - [Witold Wasiczko (@snapshotpl)](https://github.com/snapshotpl) (nominated by @weierophinney)
+- Where to post information?
+  - There's been a few indications that cross-posting the Discourse topics to
+    Slack may be unwanted.
+  - But one reason for having the Discourse cross-posting is to make people
+    aware it exists.
+  - What is the consensus?
