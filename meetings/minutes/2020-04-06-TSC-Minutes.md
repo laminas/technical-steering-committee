@@ -81,10 +81,10 @@ tool.
 ## Full example / demo application
 
 Frank had added this agenda item, and indicated he started thinking on it when
-Aleksei created the laminas-tutorials organization last year. The idea would be
-to create a new tutorial or set of tutorials that build off of each other in
-order to gradually demonstrate all features of the framework, similar to the
-[Symfony demo application](https://symfony.com/blog/introducing-the-symfony-demo-application).
+Aleksei created the laminas-tutorials GitHub organization last year. The idea
+would be to create a new tutorial or set of tutorials that build off of each
+other in order to gradually demonstrate all features of the framework, similar
+to the [Symfony demo application](https://symfony.com/blog/introducing-the-symfony-demo-application).
 
 The idea would be to provide both the tutorials **and** the entire code, to
 allow users to code along at their own pace, but then check what they do against
@@ -165,7 +165,7 @@ Possibilities for improvement that were discussed included:
 - Moving all Discourse posts to their own channel, like we do GitHub
   notifications. Rob pointed out nobody would likely subscribe to that channel,
   eliminating the usefulness of cross-posting in the first place.
-- Elminiating cross-posting entirely.
+- Eliminating cross-posting entirely.
 - Providing a daily digest. Matthew indicated this would pose a fairly heavy
   development task, as we currently have no persistence capabilities.
 - Truncating Discourse messages so they are not quite as noisy.
@@ -187,7 +187,7 @@ Slack users, as well as existing ones, but had no clear ideas presented.
 
 We ended up holding two votes on this topic:
 
-- Whether or not to kill the #qanda channel. Atending members voted unanimously
+- Whether or not to kill the #qanda channel. Attending members voted unanimously
   to kill it. Matthew will follow up after the meeting to archive the channel.
 
 - Whether or not to truncate Discourse topics posted to Slack. Attending members
