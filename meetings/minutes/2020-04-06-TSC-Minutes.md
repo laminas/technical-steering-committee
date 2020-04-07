@@ -105,7 +105,7 @@ laminas-tutorials organization under the Laminas Project umbrella; the vote was
 unanimously in favor. Matthew will work with Aleksei to add the TSC team to the
 organization.
 
-## Opcache Prelaoding for MVC, Mezzio
+## Opcache Preloading for MVC, Mezzio
 
 Matthew had posted an [RFC for providing Opcache Preloading
 tooling](https://discourse.laminas.dev/t/rfc-opache-preloading-for-mezzio-and-mvc/1442).
@@ -135,6 +135,11 @@ website when patches are available.
 
 His question was: does this process work, or do we want to create an actual
 security group?
+
+Aleksei noted that the security group's responsibilities would be to receive,
+assess, and communicate about reports; they are not necessarily responsible for
+actually fixing the issues (e.g., that responsibility might be on the part of
+the maintainer of a particular component).
 
 During discussion, we uncovered that many are uncertain if they'd be able to
 provide meaningful support, and others indicated their availability is limited.
