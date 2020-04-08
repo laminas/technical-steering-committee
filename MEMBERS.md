@@ -1,6 +1,6 @@
 # Technical Steering Committee Members
 
-- Last updated: 2020-03-05
+- Last updated: 2020-03-06
 
 - Rob Allen (@akrabat)
 - Frank Brückner (@froschdesign)
@@ -12,3 +12,7 @@
 - Marco Pivetta (@Ocramius)
 - James Titcumb (@asgrim)
 - Matthew Weier O'Phinney (@weierophinney)
+- Abdul Malik Ikhsan (@samsonasik)
+- Luís Cobucci (@lcobucci)
+- Maximilian Bösing (@boesing)
+- Witold Wasiczko (@snapshotpl)
