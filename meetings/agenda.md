@@ -97,3 +97,6 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - Do we want to do this?
   - Can we achieve it?
   - Any other suggestions?
+
+- Vote on new members:
+  - [Matthew Setter (@settermjd)](https://github.com/settermjd) (nominated by @Xerkus)
