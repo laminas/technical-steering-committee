@@ -18,7 +18,7 @@ Quorum was met (10 out of 14 members were present).
 
 ## Agenda
 
-- Will we list organizations that act as end-user support providers?
+- Will we list organizations that act as end-user support providers? ([jump to discussion](#support-providers))
 
   Matthew has had a few companies and contractors ask about having their
   information listed on the site as providing commercial support, and a few
@@ -39,7 +39,8 @@ Quorum was met (10 out of 14 members were present).
   Do we want to list support providers? If so, do we want to do so informally
   (list anyone who asks) or formally (establish criteria)?
 
-- Will we list "companies using Laminas" on the website?
+- Will we list "companies using Laminas" on the website? ([jump to discussion](#listing-who-uses-laminas-companies))
+
   On the ZF website, we had a section of the homepage that shared logos of
   companies using the framework. This helped establish the breadth of adoption,
   which helped promote the ecosystem.
@@ -53,7 +54,8 @@ Quorum was met (10 out of 14 members were present).
 
   Are we interested in doing this?
 
-- Will we use GreetBot in the Slack?
+- Will we use GreetBot in the Slack? ([jump to discussion](#greetbot))
+
   Last month, when discussing how to reduce noise in Slack, we discussed ways we
   can direct Slack users towards appropriate engagement — e.g., pushing them to
   use the forums to ask questions, reminding them of the TSC meetings, etc.
@@ -70,7 +72,8 @@ Quorum was met (10 out of 14 members were present).
   Matthew indicates he is willing to pay for this out of his GitHub sponsors
   funds; do we want to do this?
 
-- laminas-cache RFC for splitting adapters out
+- laminas-cache RFC for splitting adapters out ([jump to discussion](#laminas-cache))
+
   As already stated on [discourse](https://discourse.laminas.dev/t/rfc-laminas-cache-satellite-packages/1543),
   we should move adapters and plugins into satellite projects.
 
@@ -80,6 +83,7 @@ Quorum was met (10 out of 14 members were present).
       which has been around for almost 2,5 years.  
 
 - mezzio-cors library
+
   Max [@boesing](https://github.com/boesing) created an
   [expressive module](https://github.com/boesing/zend-expressive-cors) which can
   be used to provide proper CORS details to browsers.
@@ -142,8 +146,7 @@ membership model was going to include membership as a requirement for being
 listed as a support provider, so this seemed like a reasonable hurdle. Marco
 suggested a $500/year minimum.
 
-Aleksei linked us to the [Drupal commercial vendor program
-documentation](https://www.drupal.org/drupal-security-team/information-for-organizations-interested-in-providing-commercial-drupal-7)
+Aleksei linked us to the [Drupal commercial vendor program documentation](https://www.drupal.org/drupal-security-team/information-for-organizations-interested-in-providing-commercial-drupal-7)
 as an example of a formal program; it notes that such participants **must** be
 involved with a certain number of contributions yearly to be listed, as well as
 pay a yearly fee ($3k - similar to the original general corporate memberships we
@@ -183,31 +186,35 @@ Marco suggested a TSC vote for any that we include on the home page.
 
 We voted to:
 
-- Create a special issue-type for the getlaminas.org website repository for
+- Create a special issue template for the getlaminas.org website repository for
   submitting a case study, which will include a checkbox indicating a request to
   list on the website.
 
-- Case study submissions will be published on a special section of the website.
+- Case study submissions will be published on a special section of the website
+  after normal review.
 
 - Case studies opting-in to the home page will then be voted on by the TSC
-  before listing on the home page.
+  before listing on the home page. Even if not accepted for the home page, they
+  can be in the case studies section if otherwise approved for publication by
+  the web team.
 
 ## Intermission
 
-At this point Luís and Andreas had to leave. We still had 8 out of 14, meaning
-we had quorum, so we decided to continue.
+At this point Luís and Andreas had to leave. We still had 8 out of 14 TSC
+members present, meaning we had quorum, so we decided to continue.
 
 ## GreetBot
 
-Matthew noted that in our brainstorm last month, we agreed we want to direct
-users to the forums as much as possible, but also remind them periodically (as
-channel topics are easily overlooked). Aleksei suggested
-[GreetBot](https://greet.bot).
+Matthew noted that in our brainstorm around reducing Slack noise last month, we
+agreed we want to direct users to the forums as much as possible, but also
+remind them periodically (as channel topics are easily overlooked). Aleksei
+suggested [GreetBot](https://greet.bot) for this purpose.
 
 Matthew looked into it, and the free tier does not provide the features we want,
 and the paid tier was $12/month. He emailed the company and asked about OSS
 discounts, and they said $6/month for OSS organizations. He is willing to pay
-that from his GitHub sponsorship funds.
+that from his GitHub sponsorship funds so that the project does not need to
+spend any money at this time.
 
 Geert asked what the features we need are. Matthew noted:
 
@@ -216,7 +223,7 @@ Geert asked what the features we need are. Matthew noted:
 - Periodic messaging to remind users of forums and guidelines.
 
 As Aleksei notes, while the first can be easily handled by our bot, the next two
-are worth paying for.
+are worth paying for, as they'd cost a fair amount of time to develop.
 
 ### Summary
 
@@ -231,28 +238,34 @@ satellite packages:
 
 - https://discourse.laminas.dev/t/rfc-laminas-cache-satellite-packages/1543
 
-He wants to know primarily:
+He wanted to know primarily:
 
 - Is the approach valid?
-- How long should we wait for community feedback?
+- How long should we wait for community feedback? (Currently, it has been up for
+  2 weeks.)
 
-Marco wondered if a BC-compliant split would be possible, but we quickly
-realized that if the goal of the satellite packages is partially to allow
+Marco wondered if a BC-compliant split would be possible, as he and Matthew
+noted that if the goal of the satellite packages is partially to allow
 providing platform requirements in the packages, this would break BC immediately
 for just about everyone. Eventually, Max clarified that the approach would be as
 follows:
 
-- Initial satellite package versions WOULD NOT introduce platform requirements,
-  and would use the existing namespaces from laminas-cache (to prevent users
-  from needing to make any code changes).
+- Initial satellite package versions WOULD NOT introduce platform requirements
+  (so they could be used as requirements of the laminas-cache package
+  immediately), and would use the existing namespaces from laminas-cache (to
+  prevent users from needing to make any code changes).
 - Initial version of each satellite package would require a new minor version of
-  the laminas-cache version itself in order to obtain dependencies.
+  the laminas-cache package itself in order to obtain dependencies. Each would
+  also mark itself as a laminas/laminas-cache-storage-implementation provider.
 - The new minor version of the laminas-cache package would remove code now in
-  the satellites, and require each of the satellite packages. This allows it to
-  retain backwards compatibility.
+  the satellites, and require each of the satellite packages as dependencies.
+  _This is what allows it to retain backwards compatibility, while providing
+  forwards compatibility._ Users could immediately start explicitly requiring
+  the satellite package providing the storage adapter they use in order to
+  prepare for the next major version.
 - A new major version of laminas-cache would require a
-  laminas/laminas-cache-storage-implementation virtual package, and remove
-  dependencies on any of the satellite packages providing storage capabilities.
+  laminas/laminas-cache-storage-implementation package, and remove all
+  dependencies on satellite packages.
 - A new major version of each satellite would introduce platform requirements.
 
 Aleksei argued that the satellite packages should have their own namespaces, as
