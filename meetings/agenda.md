@@ -52,3 +52,41 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 - Vote on new members:
   - [Matthew Setter (@settermjd)](https://github.com/settermjd) (nominated by @Xerkus)
+
+- Laminas/Mezzio Release Cycle
+  
+  I would like to talk about what release cycles we might want to achieve.
+  
+  These are the release cycles of other frameworks:
+  
+  #### symfony
+  Time-based release cycle every 6 months (May/November).
+  
+  #### Yii
+  Extension releases (not quite sure what that is tbh) are tagged on a weekly-base.
+  Framework itself is tagged once a month.
+  
+  #### Drupal
+  Release windows depending on release.
+  Key dates are on a monthly base.
+  
+  - First wednesday of every month for bugfix releases
+  - Third wednesday of every month for security releases
+  
+  There are merge windows for new releases.
+  
+  #### Laminas/Mezzio
+  
+  I did not research every repository. However, in the laminas-http repository, which is required by the most-installed laminas-mvc package, there are a few bugfixes pending since january/february 2020.
+  
+  For example:
+  - [laminas/laminas-http#31](https://github.com/laminas/laminas-http/pull/31)
+  - [laminas/laminas-http#34](https://github.com/laminas/laminas-http/pull/34)
+  
+  I accidentally opened up a bugfix which was already patched back in february but not released end of may.
+  
+  Therefore, treat this as a RFC for a laminas release cycle which allows users to have their own contributed fixes in a frustration-free timeframe. If we have fixed release cycles for minors/bugfixes, I think its easier to take time to focus on those releases instead of doing this besides other stuff.
+  
+  I kinda like the release cycle of drupal which includes fixed dates so one can focus on releasing maintained packages. I see the problem that one might be not available at that time (e.g. holidays, ...) but there ain't new versions for every package every month *and* there might be always someone of the TSC who probably can step in for that special case.
+  
+  I am not that familiar with release cycles and thus like to hear what the others have to say about this. 
