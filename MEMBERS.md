@@ -1,6 +1,6 @@
 # Technical Steering Committee Members
 
-- Last updated: 2020-04-06
+- Last updated: 2020-06-01
 
 - Rob Allen ([@akrabat](https://github.com/akrabat))
 - Maximilian Bösing ([@boesing](https://github.com/boesing))
