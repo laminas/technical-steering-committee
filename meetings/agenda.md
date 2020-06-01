@@ -90,3 +90,18 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   I kinda like the release cycle of drupal which includes fixed dates so one can focus on releasing maintained packages. I see the problem that one might be not available at that time (e.g. holidays, ...) but there ain't new versions for every package every month *and* there might be always someone of the TSC who probably can step in for that special case.
   
   I am not that familiar with release cycles and thus like to hear what the others have to say about this. 
+
+- laminas-cache "going public"
+  
+  Splitting laminas-cache into satellites makes progress. Actually, there is a new repository `laminas-cache-storage-adapter-template` which can be used as a blue-print for new adapters aswell as a `laminas-cache-storage-adapter-test` which contains the following classes:
+  
+  - `LaminasTest\Cache\Storage\Adapter\AbstractAdapterTest`
+  - `LaminasTest\Cache\Storage\Adapter\AdapterOptionsTest`
+  - `LaminasTest\Cache\Storage\Adapter\CommonAdapterTest`
+  
+  These are necessary to move the unit tests into the satellites aswell.
+  
+  To move forward, we have to make those packages publicly available on packagist for further development. 
+  Those packages are actually created as private packages inside [@boesing](https://github.com/boesing) projects but should be moved to laminas project to take on with implementing those packages in the satellites.
+  
+  If there are other ways, please let us know.
