@@ -21,3 +21,11 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   But first of all, we might need a list of packages which are maintained and which are not. Having that list be publicly available and visible (either on github and/or on the laminas website) will help all (especially the TSC) to see where maintainers are needed.
   
   Having that list will also help (current and potential new) maintainers to have visibility of their voluntary efforts. They could use it while applying on new jobs or whatsoever.
+
+- laminas-diactoros-serializer
+
+  Somebody recently [requested on the Diactoros issue tracker that we separate the serializer implementations into a separate package that uses PSR-17 factories to produce instances](https://github.com/laminas/laminas-diactoros/issues/43).
+  This is something I (Matthew) have been considering for a while, and it was reasonably easy to do so:
+  https://github.com/weierophinney/laminas-diactoros-serializer
+
+  I'd like to bring this in under the Laminas umbrella, and then start working on deprecating the functionality in Diactoros (by first having our own code proxy to the new code).
