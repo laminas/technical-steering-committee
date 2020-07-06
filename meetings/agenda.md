@@ -29,3 +29,11 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   https://github.com/weierophinney/laminas-diactoros-serializer
 
   I'd like to bring this in under the Laminas umbrella, and then start working on deprecating the functionality in Diactoros (by first having our own code proxy to the new code).
+
+- adopt `doctrine/automatic-releases`?
+   
+   * demo
+   * port to laminas organisation, adopt laminas license?
+   * move it to GitHub actions
+   * which user and GPG key should we use for releasing?
+   * Is the brainching model suitable for laminas?
