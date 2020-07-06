@@ -14,7 +14,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - Is there a list of current maintainers?
   - If not, how could we provide informations about our packages maintainers?
   
-  Currently, the only way how a developer may become a maintainer of a package is, that he has to contribute and be visible for the TSC. But what, if a package cannot evolve that fast? What, if there are plenty of developers who might want to apply as a maintainer to help out but don't know how (due to lack of ideas for new features or lack of bugs - which should be good tho ;-))?
+  Currently, the only way a developer may become a maintainer of a package is that they have to contribute and be visible for the TSC. But what, if a package cannot evolve that fast? What, if there are plenty of developers who might want to apply as a maintainer to help out but don't know how (due to lack of ideas for new features or lack of bugs - which should be good tho ;-))?
   
   We should probably consider an application of developers where they choose their favorite package. Probably like a job application (which is actually volunteering). Probably, developers want to apply to a package which is (currently) unmaintained.
   
