@@ -37,3 +37,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
    * move it to GitHub actions
    * which user and GPG key should we use for releasing?
    * Is the brainching model suitable for laminas?
+
+- rename master branch
+
+  In light of the recent societal focus on issues of racism and diversity, can we please adopt [more inclusive terminology as proposed to the IETF](https://tools.ietf.org/id/draft-knodel-terminology-00.html)? In particular candidates for change include renaming the "master" branch to "main" (per GitHub's own recommendations), and finding locations where we use terms such as "whitelist" and "blacklist" and renaming these.
