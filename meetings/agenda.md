@@ -44,3 +44,5 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - laminas/laminas-xml2json
 
 - @weierophinney proposes a by-law change to require only 2/3 of members vote for asynchronous votes. This ensures that if any member is unable to be present, we do not need to wait until the next TSC meeting to hold a vote.
+
+- Vote on adopting a static analysis tool: Psalm vs phpstan
