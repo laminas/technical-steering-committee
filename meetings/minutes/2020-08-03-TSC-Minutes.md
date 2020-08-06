@@ -26,7 +26,7 @@ Quorum was met (13 out of 15 members were present).
 
   As we are about to mark packages to receive security-only fixes, @boesing
   would like to discuss if we want to apply the new branch model (related to the
-  new release-process) to those repositories aswell or if we exclude these?
+  new release-process) to those repositories as well or if we exclude these?
 
 - Vote on components to mark security only.
   ([jump to discussion](#vote-on-components-to-mark-as-security-only))
@@ -199,7 +199,7 @@ it were:
 
 - Psalm's default settings already enforce the majority of what we want.
 
-- Psalm has a team of developers behind it, versus a single developer.
+- Development on Psalm is outpacing that of PHPStan.
 
 Consensus amongst those present is that, overall, Psalm tends to have fewer
 false positive error detections, and also provides more actionable feedback to
