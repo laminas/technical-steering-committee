@@ -9,7 +9,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 - Hacktoberfest
   
-  - [Hacktoberfest](](https://hacktoberfest.digitalocean.com/)) is incoming and we can take advantage of that event. As we are still searching for maintainers and want to encourage developers to contribute to laminas, we could start focusing on repositories which have open TODOs. These TODOs might be one of the following:
+  - [Hacktoberfest](https://hacktoberfest.digitalocean.com/) is incoming and we can take advantage of that event. As we are still searching for maintainers and want to encourage developers to contribute to laminas, we could start focusing on repositories which have open TODOs. These TODOs might be one of the following:
   
       - PHP 8 support + CI setup (should we create a HOWTO for this?)
       - Adding psalm + CI setup (should we create a psalm configuration template?) 
