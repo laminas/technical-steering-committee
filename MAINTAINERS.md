@@ -23,37 +23,22 @@ matching the repository name:
 This guide is intended for *maintainers* — anybody with commit access to one or more laminas Framework
 repositories.
 
-We use the [git flow methodology](http://nvie.com/posts/a-successful-git-branching-model/) for
+We use [automatic relases](https://github.com/laminas/automatic-releases) for
 managing the various laminas Framework repositories. At a glance, this means:
 
-- a **master** branch. This branch MUST be releasable at all times. Commits and merges against
-  this branch MUST contain only bugfixes and/or security fixes. Maintenance releases are tagged
-  against master.
-- a **develop** branch. This branch contains *new features*, and will either become the next minor
-  (feature) release or next major release. Typically, major releases are reserved for backwards
-  *incompatible* changes, but can also be used to signal major new features.
+- two or more minor version branches of the current major release
+  - the highest minor version branch must not be released (i.e. does not have matching version tags like `1.0.0` 
+    for `1.0.x`).
+  - all other minor version branches must be released (i.e. have one or more version tags).
+- only unrelased branches may receive *new features*.
+- released branches must only receive bugfixes or security fixes.
+- releases (tags, next minor branch, github releases) will be performed automatically
+  by the automatic releases workflow. 
 
 Maintainers can choose to release new maintenance releases with each new patch, or accumulate
 patches until a significant number of changes are in place. Security fixes, however, must be
-released immediately and coordinated with the laminas Framework team to ensure an advisory is made, a
-CVE is created, and that the fix is backported to the Long Term Support release.
-
-> ## DO NOT PRESS THE GREEN BUTTON
->
-> ![Merge button](img/green-button.png)
->
-> GitHub provides a button, affectionately called the "green button," for merging pull requests from
-> the web interface.
->
-> **DO NOT EVER USE IT.**
->
-> Because we follow git flow, any changes made on `master` must also be merged to `develop`, and
-> this cannot be accomplished from the web interface. Additionally, we request that you annotate
-> the merge commits to reference the pull request and any associated issues; this practice
-> simplifies determining the source of a feature, and allows developers to discover the rationale
-> as well as any discussion that occurred.
->
-> The remainder of this document details how to merge pull requests to the repositories.
+released immediately and coordinated with the TSC to ensure an advisory is made, a
+CVE is created, and that the fix is backported to the Long Term Support releases.
 
 ## Reviewing Pull Requests
 
@@ -135,16 +120,15 @@ During your review, consider the following points:
 
 ## Workflow for merging Pull Requests
 
-Check which branch the PR was made against — patches made against the `develop` branch should only
-be merged to `develop`. Patches made against the `master` branch may be merged to only `develop`, or
-both `develop` AND `master`. The criteria to use in this latter situation is: does the patch
-introduce anything new to the API? does it potentially mark a change in behavior of any sort? If the
-answer to either of these is "yes", merge only to the `develop` branch.
+Pull Requests should only be merged into the branches they were made against. When a PR contains a 
+feature and was made against an already released branch, you should work with the contributor to target
+it against the next release branch. The PR should have a Milestone matching the next release of the
+target branch (for example milestone `1.0.1` for branch `1.0.x`).
 
 To sum up:
 
-- If the commit is a bugfix, merge to **both** `master` **and** `develop`.
-- If the commit is a new feature, merge to `develop` **only**.
+- If the PR is a bugfix, it should target the lowest affected release branch
+- If the PR is a new feature, merge to `develop` **only**.
 
 ### Start the process with a clean checkout
 
