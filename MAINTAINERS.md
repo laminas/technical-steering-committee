@@ -26,19 +26,26 @@ repositories.
 We use [automatic relases](https://github.com/laminas/automatic-releases) for
 managing the various laminas Framework repositories. At a glance, this means:
 
-- two or more minor version branches of the current major release
-  - the highest minor version branch must not be released (i.e. does not have matching version tags like `1.0.0` 
-    for `1.0.x`).
-  - all other minor version branches must be released (i.e. have one or more version tags).
-- only unrelased branches may receive *new features*.
-- released branches must only receive bugfixes or security fixes.
-- releases (tags, next minor branch, github releases) will be performed automatically
-  by the automatic releases workflow. 
+- releases are defined by milestones in GitHub
+- the milestone *must* be named by a specific semantic version number with major, minor and patch number
+  without a prefix (example: `1.0.0`)
+- there must be a release branch matching the minor version of this milestone
+- these release branches *must* be named by major and minor version numbers and a literal `x` for the patch number
+  without a prefix (example: `1.0.x`)
+- when such a milestone is closed, the automatic-releases workflow will perform the following actions:
+  - create a tag named by the version number
+  - create a new release via the github api
+  - if a release branch exists for the next *minor* version of this milestone, it will create a PR with the released 
+    changes against this branch
+  - if there is no release branch for the next *minor* version of this milestone, it will be created
+- all pull requests *must* be assigned to a milestone that matches the release branch
+- pull requests that are adding new features *must* target the most recent, unreleased branch
+- pull requests with bugfixes may target any actively maintained release branch.
 
 Maintainers can choose to release new maintenance releases with each new patch, or accumulate
-patches until a significant number of changes are in place. Security fixes, however, must be
-released immediately and coordinated with the TSC to ensure an advisory is made, a
-CVE is created, and that the fix is backported to the Long Term Support releases.
+patches until a significant number of changes are in place. Security fixes, however, must be coordinated with 
+the TSC to ensure an advisory is made, a CVE is created and the fix is applied to all releases within the current 
+security support window.
 
 ## Reviewing Pull Requests
 
@@ -87,6 +94,12 @@ During your review, consider the following points:
   and/or [Community Review team](mailto:laminas-crteam@lists.laminas.com) to ensure that testing can be done
   on related components and so that the main laminas release can be tested.
 
+- Is this PR fixing a bug? If so:
+
+  - Make sure the PR is targeting a previous release branch. Most likely a contributor will
+    open the PR against the current release branch. When this is the case, re-target the PR
+    against the previous release branch and guide the contributor to rebase/cherry-pick their changes.
+
 - Is this a new feature? If so:
 
   - Does the issue contain narrative indicating the need for the feature? If not, ask them to
@@ -117,66 +130,27 @@ During your review, consider the following points:
     the author is the one most familiar with the changes they are introducing, they are the party
     most likely to resolve conflicts correctly.
 
-
 ## Workflow for merging Pull Requests
 
-Pull Requests should only be merged into the branches they were made against. When a PR contains a 
-feature and was made against an already released branch, you should work with the contributor to target
-it against the next release branch. The PR should have a Milestone matching the next release of the
-target branch (for example milestone `1.0.1` for branch `1.0.x`).
+Pull Requests should only be merged into the correct release branches:
 
-To sum up:
+- If the PR is a bugfix, it should target one of the previous release branches.
+  The only exception is when the package is not yet released and therefore has only 
+  one release branch.
+- If the PR is a new feature, merge it to the latest release branch **only**.
 
-- If the PR is a bugfix, it should target the lowest affected release branch
-- If the PR is a new feature, merge to `develop` **only**.
+You may merge it by using the green "Merge" button in github. If you do so, use only the
+"Create a merge commit" option. Do **not** use "Squash and merge" or "Rebase and merge". 
 
-### Start the process with a clean checkout
+Alternatively you may clone the repository and merge the PR locally. If you decide to do so, 
+do not apply additional changes other than changelog entries to the merge.
 
-Before you begin merging, do the following:
+## Maintaining the Changelog
 
-```console
-$ git fetch origin
-$ git checkout master && git rebase origin/master
-$ git checkout develop && git rebase origin/develop
-```
+All components follow [Keep a CHANGELOG](http://keepachangelog.com/). This file is merged
+with listing of the PRs and issues assigned to milestone of the release. 
 
-This will set each branch to the latest commit from the canonical repository.
-
-### Create a local merge branch
-
-Next, create a new branch locally for the change, based off the appropriate branch. Use the prefix
-`hotfix/` for fixes, and `feature/` for features; typically, use the PR number as the branch name.
-
-```console
-$ git checkout -b hotfix/2854 master
-$ git checkout -b feature/2719 develop
-```
-
-### Pull in the changeset
-
-Now you're staged and ready to pull the changeset in. On the bar that occurs before comments, on the
-left side is a little "information" icon. Click on this, and you get a popup dialog showing the
-steps to take to manually merge. If you click the icon next to the second step, it will copy a "git
-pull" command to your clipboard. Paste this into your terminal.
-
-> #### Hub
->
-> GitHub develops a [hub](https://github.com/github/hub) command that provides a superset of
-> features for your git executable. It can make the following far simpler:
->
-> ```console
-> $ git merge <url to PR>
-> ```
->
-> We recommend using the hub command to make your life as a maintainer easier!
-
-At this point, you can do a final review of the patch — run tests, run CS checks, normalize code,
-etc. Commit any changes you need to make *in* *that* *branch*.
-
-### Create a Changelog
-
-Starting with v2.5 of all components, and v1 of new components such as Diactoros and Stratigility,
-we follow [Keep a CHANGELOG](http://keepachangelog.com/). The format is simple:
+The format is as follows:
 
 ```markdown
 # CHANGELOG
@@ -206,104 +180,15 @@ we follow [Keep a CHANGELOG](http://keepachangelog.com/). The format is simple:
 ```
 
 Each version gets a changelog entry in the project's `CHANGELOG.md` file. Not all changes need to be
-noted; things like coding standards fixes, continuous integration changes, or typo fixes do not need
-to be communicated. However, anything that falls under an addition, deprecation, removal, or fix
-MUST be noted. Please provide a succinct but *narrative* description for the change you merge. Once
-written, commit the `CHANGELOG.md` file against your local branch.
+noted; things like bugfixes, coding standards fixes, continuous integration changes, or typo fixes do not need
+to be communicated. However, anything that falls under an addition, deprecation, removal
+MUST be noted. Please provide a succinct but *narrative* description for the change you merge.
 
-### Merge to the canonical branches
+You may also ask the contributor to add these entries to get a feeling for what they're trying to accomplish.
 
-At this point, you can finally merge to the canonical branches!
+## Performing a Release
 
-Checkout the target branch (`master` or `develop`), and merge the change in using the `--no-ff`
-flag. For changes going to master, you'll need to do both master and develop.
-
-> #### Configure your checkout
->
-> Another way you can simplify your job is to configure your checkout. You can omit the need to type
-> the `--no-ff` flag on each merge by adding the following configuration line to the branch
-> configuration in the checkout's `.git/config` file:
->
-> ```dosini
-> [branch "master"]
->     ...
->     mergeoptions = --no-ff
-> ```
-
-As an example of merging a hotfix:
-
-```console
-$ git checkout master
-$ git merge --edit --no-ff hotfix/2854
-$ git checkout develop
-$ git merge --edit --no-ff hotfix/2854
-```
-
-Note that, because this is a hotfix, it was merged to both `master` *and* `develop`!
-
-As an example of merging only a feature:
-
-```
-$ git checkout develop
-$ git merge --edit --no-ff feature/2719
-```
-
-Since this is a feature, it was merged to `develop` *only*.
-
-The commit message for the target branch should include the merge statement, as well as a line like
-the following:
-
-```
-Close #2854
-```
-
-If merging to both `master` and `develop`, the `develop` branch should indicate that it's *forward
-porting* a fix:
-
-```
-Forward port #2854
-```
-
-If the fix will close other PRs or issues, also close those in the target branch using the
-`Fix #...` or `Close #...` notation.
-
-> #### Make macros for commit messages
->
-> Automate, automate, automate. Create a macro in the editor you have configured git to invoke for
-> each of these commit messages; that way you can hit a key combination to fill in the messages for
-> you.
-
-### Push the changes upstream
-
-At this point, you can push your changes. If you committed a bugfix, push both branches:
-
-```console
-$ git push origin master:master && git push origin develop:develop
-```
-
-If committing a feature, push only the `develop` branch:
-
-```console
-$ git push origin develop:develop
-```
-
-Once pushed, you can delete the merge branch you created.
-
-> ### Conflicts
->
-> Occasionally, more than one maintainer will be merging to the same repository. As such, do a quick
-> `git fetch origin` prior to pushing to check for changes. If you see any, you'll need to reset
-> your branches, and re-merge:
->
-> ```console
-> $ git checkout develop && git reset --hard origin/develop
-> $ git checkout master && git reset --hard origin/master
-> $ git merge --no-ff hotfix/2719
-> $ git checkout develop
-> $ git merge --no-ff hotfix/2719
-> ```
->
-> If you notice merge conflicts, delete your merge branch, and start again from the top.
+Releases are automatically performed by closing a milestone.
 
 ### Tag the milestone
 
