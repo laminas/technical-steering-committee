@@ -19,3 +19,17 @@ That is quite inefficient, since:
 
 It could be a good idea to just endorse opening issues as "feature request" or "RFC" instead, since all the Laminas TSC members and community members
 are quite familiar with PR/issue tooling of GitHub.
+
+### Github Actions instead of Travis-CI?
+
+Github Actions has been, so far, much faster and efficient to set up in repositories all over github.
+
+While Travis-CI is certainly a good platform that has served us well for many many years, having the ability to create our own github actions may simplify
+the CI setup for most our repositories.
+
+The proposal is to:
+
+ * Find an optimal "baseline" Github Actions workflow that we'd like to use
+ * Investigate whether there is a way to unify most CI workflows (rather than maintaining them in each repository)
+ * Move current Travis-CI configuration to Github Actions workflows
+ * Sunset Travis-CI configuration and disable it on the various repositories
