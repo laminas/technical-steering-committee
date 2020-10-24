@@ -7,6 +7,10 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to discuss
 
+1. [RFCs - discuss directly on GitHub?](#rfcs---discuss-directly-on-github)
+2. [Github Actions instead of Travis-CI?](#github-actions-instead-of-travis-ci)
+3. [Laminas cache satellites to abandon](#cache-adapters-to-abandon)
+
 ### RFCs - discuss directly on GitHub?
 
 As [noted by the user on the laminas slack](https://laminas.slack.com/archives/C4QBQUEG5/p1602604527127400), our current issue template suggests that
@@ -33,3 +37,44 @@ The proposal is to:
  * Investigate whether there is a way to unify most CI workflows (rather than maintaining them in each repository)
  * Move current Travis-CI configuration to Github Actions workflows
  * Sunset Travis-CI configuration and disable it on the various repositories
+
+
+### Cache adapters to abandon
+
+With `laminas/laminas-cache` v2.10, all cache adapters are moved to their own satellite.
+Next step would be to abandon some of those packages as we are either dropping support for PHP <7.3 and some adapters never migrated to PHP 7 **or** we just dont want to support specific cache backends anymore.
+
+The following adapters are currently "available":
+
+- [APC](https://github.com/laminas/laminas-cache-storage-adapter-apc)
+- [APCu](https://github.com/laminas/laminas-cache-storage-adapter-apcu)
+- [BlackHole](https://github.com/laminas/laminas-cache-storage-adapter-blackhole)
+- [DBA](https://github.com/laminas/laminas-cache-storage-adapter-dba)
+- [ExtMongodb](https://github.com/laminas/laminas-cache-storage-adapter-ext-mongodb)
+- [Filesystem](https://github.com/laminas/laminas-cache-storage-adapter-filesystem)
+- [Memcache](https://github.com/laminas/laminas-cache-storage-adapter-memcache)
+- [Memcached](https://github.com/laminas/laminas-cache-storage-adapter-memcached)
+- [Memory](https://github.com/laminas/laminas-cache-storage-adapter-memory)
+- [ExtMongodb](https://github.com/laminas/laminas-cache-storage-adapter-mongodb)
+- [Redis](https://github.com/laminas/laminas-cache-storage-adapter-redis)
+- [Session](https://github.com/laminas/laminas-cache-storage-adapter-session)
+- [WinCache](https://github.com/laminas/laminas-cache-storage-adapter-wincache)
+- [XCache](https://github.com/laminas/laminas-cache-storage-adapter-xcache)
+- [ZendServer](https://github.com/laminas/laminas-cache-storage-adapter-zend-server)
+
+
+#### We should abandon the following packages:
+
+- APC 
+    - it is superseded by APCu and thus not needed anymore
+- Memcache 
+    - it was dead for almost 7 years
+    - Last year, some guys fixed the extension to work with PHP 7+ but its not in active development
+- WinCache 
+    - Windows (Microsoft dropped support for PHP anyways) 
+    - there is no-one who can execute tests for this package (not even travis)
+- XCache
+    - is dead for years
+    
+- ZendServer
+    - there is no-one who can execute tests for this package (not even travis)
