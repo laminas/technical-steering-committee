@@ -10,6 +10,11 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 1. [RFCs - discuss directly on GitHub?](#rfcs---discuss-directly-on-github)
 2. [Github Actions instead of Travis-CI?](#github-actions-instead-of-travis-ci)
 3. [Laminas cache satellites to abandon](#cache-adapters-to-abandon)
+4. [Commercial vendor program updates?](#commercial-vendor-program)
+
+### Commercial vendor program updates?
+
+Updates on the commercial vendor program? Any vote as appropriate?
 
 ### RFCs - discuss directly on GitHub?
 
