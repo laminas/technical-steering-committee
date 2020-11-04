@@ -109,7 +109,7 @@ Other points brought up:
 - A single step/action that runs everything would be ideal.
 - Parity with `.travis.yml` would be ideal.
 
-Matthew W asked for volunteers to reesarch solutions and develop a plan.
+Matthew W asked for volunteers to research solutions and develop a plan.
 The following people indicated they were interested:
 
 - Matthew S
