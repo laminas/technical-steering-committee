@@ -7,3 +7,4 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to discuss
 
+-  Pull request instructions are out of date, referring to master and develop branches which do not exist any more.
