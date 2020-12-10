@@ -1,6 +1,6 @@
 ---
 name: Maintainer Nomination
-about: Propose new feature(s) or major changes to the component
+about: Nominate somebody to maintain a Laminas/Mezzio/Laminas API Tools repository
 title: "[NOMINATION][MAINTAINER]: {name of person being nominated}"
 labels: Nomination
 ---
