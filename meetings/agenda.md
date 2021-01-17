@@ -17,3 +17,8 @@ the repository history, as well as on github.
 An alternative suggested approach could be to generate a `CHANGELOG.md` in the documentation build,
 by picking the list of pre-existing tags and unrolling it in that process, therefore removing the
 need for keeping a build artifact in the repository.
+
+Examples:
+
+ * https://github.com/laminas/laminas-servicemanager/pull/76
+ * https://github.com/laminas/laminas-mail/pull/125 merge-up actively interrupted a productive day of merge/release there: https://github.com/laminas/laminas-mail/pull/125#issuecomment-752996771
