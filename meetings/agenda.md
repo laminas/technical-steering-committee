@@ -19,7 +19,6 @@ Examples:
 - https://github.com/laminas/laminas-servicemanager/pull/76
 - https://github.com/laminas/laminas-mail/pull/125 merge-up actively interrupted a productive day of merge/release there: https://github.com/laminas/laminas-mail/pull/125#issuecomment-752996771
 
-
 ### Future of laminas-servicemanager 4.0
 
 [Max](https://github.com/boesing) wants to talk about the next step with `laminas-servicemanager` v4.
@@ -31,3 +30,12 @@ Since then, Max backported all potential non-breaking changes from the real `4.0
 So as of now, `3.6.x` and `4.0.x` are quite derived. Thus said, there are several fixes in `3.6.x` which should find their way back to `4.0.x` but merging up all these changes would end up in a huge mess.
 
 The only breaking change in the `4.0.x` branch should be the `PSR-11` changes of all interfaces (**assumption**). [Matthew](https://github.com/weierophinney) also created an [RFC](https://discourse.laminas.dev/t/rfc-removal-of-container-interop-from-laminas-servicemanager/1608) regarding `PSR-11` which did not yet had a huge audience. So Max is calling changes in `4.0.x` as obsolete and thus suggests to drop `4.0.x` until we have a proper migration strategy.
+
+### Drop DCO requirement
+
+From [Stackoverflow](https://stackoverflow.com/questions/1962094/what-is-the-sign-off-feature-in-git-for) (not authoritative, but good source), it seems clear that DCO requirements come from a silly lawsuit that never actually got pushed through.
+Requiring DCO has been a constant pain, and I (@ocramius) have been regularly ignoring/skipping it myself too for many patches for which chasing down the author is just irrespectful of both maintainer and contributor time.
+
+We already do regular signed git releases that certify authenticity of our code, and we are well aware that we cannot copy-paste code from proprietary components, and that is already part of our review process.
+
+Overall, DCO needs to go: the question is how to proceed with that.
