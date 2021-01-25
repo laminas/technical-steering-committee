@@ -38,4 +38,11 @@ Requiring DCO has been a constant pain, and I (@ocramius) have been regularly ig
 
 We already do regular signed git releases that certify authenticity of our code, and we are well aware that we cannot copy-paste code from proprietary components, and that is already part of our review process.
 
-Overall, DCO needs to go: the question is how to proceed with that.
+[Matthew](https://github.com/weierophinney) notes that this was a requirement for being a part of the Linux Foundation, and that:
+
+- Commits made from the GitHub web UI can include the verbiage `Signed-Off-By: {fullname}<{email}>` to fulfill the DCO bot requirements.
+- Maintainers have the option of marking the DCO check as passing.
+
+However, these do not solve the problems of users who are not aware of the DCO requirement when doing a UI-based commit, those unfamiliar/uncomfortable with git tooling to add sign-off via rebase, and/or those uncomfortable having their email address in the commit message itself (as GitHub will use an obscured email for those who choose to keep their email private).
+
+[Maks3w](https://github.com/Maks3w) suggests an alternate integration that allows performing DCO sign-off via a GitHub comment (specifically [this one](https://github.com/cla-assistant/github-action), and Matthew has contacted our LF legal counsel to determine if this is viable.
