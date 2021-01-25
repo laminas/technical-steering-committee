@@ -18,3 +18,16 @@ Examples:
 
 - https://github.com/laminas/laminas-servicemanager/pull/76
 - https://github.com/laminas/laminas-mail/pull/125 merge-up actively interrupted a productive day of merge/release there: https://github.com/laminas/laminas-mail/pull/125#issuecomment-752996771
+
+
+### Future of laminas-servicemanager 4.0
+
+[Max](https://github.com/boesing) wants to talk about the next step with `laminas-servicemanager` v4.
+
+As we had huge problems with `laminas-servicemanager` `3.5.0` which had to be fully reverted due to the versioning problem when `laminas-automatic-releases` was added.
+
+Since then, Max backported all potential non-breaking changes from the real `4.0.x` branch to `3.6.x` which already received 3 patches (2021-01-25) regarding BC breaks which were not covered by unit tests.
+
+So as of now, `3.6.x` and `4.0.x` are quite derived. Thus said, there are several fixes in `3.6.x` which should find their way back to `4.0.x` but merging up all these changes would end up in a huge mess.
+
+The only breaking change in the `4.0.x` branch should be the `PSR-11` changes of all interfaces (**assumption**). [Matthew](https://github.com/weierophinney) also created an [RFC](https://discourse.laminas.dev/t/rfc-removal-of-container-interop-from-laminas-servicemanager/1608) regarding `PSR-11` which did not yet had a huge audience. So Max is calling changes in `4.0.x` as obsolete and thus suggests to drop `4.0.x` until we have a proper migration strategy.
