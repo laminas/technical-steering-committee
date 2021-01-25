@@ -46,3 +46,9 @@ We already do regular signed git releases that certify authenticity of our code,
 However, these do not solve the problems of users who are not aware of the DCO requirement when doing a UI-based commit, those unfamiliar/uncomfortable with git tooling to add sign-off via rebase, and/or those uncomfortable having their email address in the commit message itself (as GitHub will use an obscured email for those who choose to keep their email private).
 
 [Maks3w](https://github.com/Maks3w) suggests an alternate integration that allows performing DCO sign-off via a GitHub comment (specifically [this one](https://github.com/cla-assistant/github-action), and Matthew has contacted our LF legal counsel to determine if this is viable.
+
+### Adopt the proposed GitHub Actions workflow
+
+[Matthew](https://github.com/weierophinney) worked on a variety of GitHub Action workflows for implementing CI tooling, due to the fact that we used up our Travis-CI minutes yet again by mid-month.
+The work he has done was based in part by reviewing workflows on other projects, some experimentation with how matrix settings work, and reviewing work [Marco](https://github.com/ocramius) did on the laminas/laminas-code repository.
+He has now provided an [RFC on how to implement our workflows](https://github.com/laminas/technical-steering-committee/issues/61), and would like to get approval to start rolling it out.
