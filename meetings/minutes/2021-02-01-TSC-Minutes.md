@@ -53,7 +53,7 @@ The only breaking change in the `4.0.x` branch should be the `PSR-11` changes of
 ([jump to discussion](#dropping-commit-based-dco))
 
 From [Stackoverflow](https://stackoverflow.com/questions/1962094/what-is-the-sign-off-feature-in-git-for) (not authoritative, but good source), it seems clear that DCO requirements come from a silly lawsuit that never actually got pushed through.
-Requiring DCO has been a constant pain, and I (@ocramius) have been regularly ignoring/skipping it myself too for many patches for which chasing down the author is just irrespectful of both maintainer and contributor time.
+Requiring DCO has been a constant pain, and [Marco](https://github.com/ocramius) has been regularly ignoring/skipping it for many patches for which chasing down the author is just irrespectful of both maintainer and contributor time.
 
 We already do regular signed git releases that certify authenticity of our code, and we are well aware that we cannot copy-paste code from proprietary components, and that is already part of our review process.
 
