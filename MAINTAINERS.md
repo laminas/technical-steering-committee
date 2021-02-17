@@ -127,49 +127,59 @@ If the PR contains a lot of small, undocumented changes (e.g., many small change
 (We do not recommend using "Rebase and merge", as it can potentially break scenarios where multiple patches are created off of each other; in such cases, the commits have differing hash identifiers, which can make keeping the later patches up-to-date difficult.)
 
 Alternatively you may clone the repository and merge the PR locally.
-If you decide to do so, do not apply additional changes other than changelog entries to the merge.
+If you decide to do so, do not apply additional changes to the merge.
 When merging, you have the option of using either a normal merge (`git merge`) or a fast-forward merge (`git merge --ff`); the latter, if git allows it, has the benefit of keeping the history more linear.
 
 ## Maintaining the Changelog
 
-All components follow [Keep a CHANGELOG](https://keepachangelog.com/) for purposes of maintaining a changelog.
-During release, we merge the contents with a listing of the PRs and issues assigned to the corresponding release milestone as well, and provide attribution; this is done via the [automatic-releases workflow](https://github.com/laminas/automatic-releases).
+We follow [Keep a CHANGELOG](https://keepachangelog.com/) when documenting user-facing changes in a milestone.
 
 The format is as follows:
 
 ```markdown
-# CHANGELOG
-
-## X.Y.Z - YYYY-MM-DD
-
 ### Added
 
-- [#42](https://github.com/organization/project/pull/42) adds documentation!
+- Adds support for PHP 8.0
 
 ### Changed
 
-- Nothing.
+- Did a change that has user impact. . .
 
 ### Deprecated
 
-- Nothing.
+- Marked such-and-such feature as deprecated; use this-and-that feature to be forwards compatible.
 
 ### Removed
 
-- Nothing.
+- Removed support for PHP versions prior to 7.3.
 
 ### Fixed
 
-- [#51](https://github.com/organization/project/pull/51) fixes something to be better.
+- A fix for such-and-such could lead to differences in calculations.
 ```
 
-Each version gets a changelog entry in the project's `CHANGELOG.md` file.
-Not all changes need to be noted; things like bugfixes, coding standards fixes, continuous integration changes, or typo fixes do not need to be communicated.
-However, anything that falls under an addition, deprecation, or removal **MUST** be noted, in a narrative form that details the impact on the user (what they may need to change, what benefits they may receive, etc.).
+User-facing changes should be catalogued in the milestone description using the above format, using as many of the sections as make sense for the release.
+When the automatic-releases workflow triggers, they will be included in the tag commit message, and the release notes.
 
-You may also ask the contributor to add these entries to get a feeling for what they're trying to accomplish.
+Examples of scenarios where notes should be added:
 
-The [phly/keep-a-changelog](https://github.com/phly/keep-a-changelog) tool can be used to generate entries.
+- When a new feature is created.
+  Give a short description of what it does, and link to where the documentation will live once released.
+
+- When a change has been introduced that could change behavior.
+  Generally speaking, these should only happen during major versions, and are indicative of a backwards compatibility break.
+  As such, you should detail what changes the user should make to retain prior behavior, if possible.
+  Link to migration documentation, when available.
+
+- Whenever a deprecation is introduced, detail it here, and indicate what alternatives exist, and/or when the functionality will be removed entirely.
+
+- Removals of functionality (BC break!), or removal of support for specific dependency versions (e.g., when bumping the minimum-supported PHP version, or bumping the minimum-supported version of a dependency).
+
+- Generally speaking, only note fixes (the "Fixed" section) if they have user impact — but **always** when the release addresses a reported security vulnerability.
+
+> ### What if a CHANGELOG.md file exists?
+>
+> If a `CHANGELOG.md` file exists in the repository, you can remove it prior to the next release, and move any entries it contains for the next version into the milestone description for that version.
 
 ## Performing a Release
 
@@ -179,12 +189,9 @@ The [automatic-releases workflow](https://github.com/laminas/automatic-releases)
 
 The automatic-releases workflow:
 
-- Updates the changelog:
-  - Sets the release date.
-  - Prunes any empty sections in the release notes (anything with just `- Nothing` listed).
-  - Appends release notes based on all closed issues and pull requests related to the assocaited milestone.
-- Tags the release and pushes it to the repository.
-- Creates a release in the repository based on the tag, and using the changelog for the version.
+- Gathers release notes from the milestone description and any closed issues or pull requests related to the associated milestone.
+- Tags the release, using the release notes, and pushes it to the repository.
+- Creates a release in the repository based on the tag, and using the release notes.
 - Bumps to the next bugfix version in the changelog, and pushes it to the repository.
 - Creates the next minor release branch, if it doesn't already exist, bumping the changelog to the next minor version.
 - If the next minor release branch exists, it creates a "merge-up" pull request, with changes since the last bugfix release.
@@ -211,9 +218,3 @@ $ git push -f
 Go for it.
 
 The release branch strategy we use should allow merging without issues; if there are any resolve the conflicts.
-
-### What order should CHANGELOG entries be in?
-
-CHANGELOG entries should be in reverse chronological order based on release date, and taking into account *future* release date.
-
-Generally speaking, the [automatic-releases](https://github.com/laminas/automatic-releases) workflow will take care of this for you, and you should only need to worry about it when resolving merge conflicts from merge-up pull requests.
