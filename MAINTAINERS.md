@@ -213,6 +213,8 @@ $ git rebase -i {target release branch}
 $ git push -f
 ```
 
+And then go edit the PR within Github to change the base branch the PR was open onto.
+
 ### What if I want to merge a patch made against an earlier release branch to a later one?
 
 Go for it.
