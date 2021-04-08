@@ -55,7 +55,7 @@ Quorum was met (14 out of 15 members were present).
   - [Memcache](https://github.com/laminas/laminas-cache-storage-adapter-memcache)
   - [Memcached](https://github.com/laminas/laminas-cache-storage-adapter-memcached)
   - [Memory](https://github.com/laminas/laminas-cache-storage-adapter-memory)
-  - [ExtMongodb](https://github.com/laminas/laminas-cache-storage-adapter-mongodb)
+  - [Mongodb](https://github.com/laminas/laminas-cache-storage-adapter-mongodb)
   - [Redis](https://github.com/laminas/laminas-cache-storage-adapter-redis)
   - [Session](https://github.com/laminas/laminas-cache-storage-adapter-session)
   - [WinCache](https://github.com/laminas/laminas-cache-storage-adapter-wincache)
