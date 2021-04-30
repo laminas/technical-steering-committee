@@ -5,14 +5,14 @@
 
 Please file pull requests to add, or discuss items to add, to the agenda.
 
-## Items to discuss
+## Items to Discuss
 
-### Branch protection
+### Branch Protection
 
 [Filippo Tessarotto](https://github.com/Slamdunk) asks to add branch protection for release branches, see https://github.com/laminas/technical-steering-committee/issues/71
 
 
-### Abandoning laminas-cache satellites (part 2)
+### Abandoning Laminas-Cache Satellites (Part 2)
 
 [Maximilian Bösing](https://github.com/boesing) is working on `laminas-cache` to integrate new GHA workflow but has problems with some storage adapters due the fact that these are not maintainable at all. The TSC did already voted about this [back in november 2020](https://github.com/laminas/technical-steering-committee/blob/main/meetings/minutes/2020-11-02-TSC-Minutes.md#cache-adapters) but the vote was not focussing the abandoning and thus it is brought up again.
 
@@ -32,7 +32,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
   Having these adapters removed will help spending time on those adapters which we can actively support along with proper integration tests within our CI pipeline.
 
-### Contribution guidelines
+### Contribution Guidelines
 
 [Maximilian Bösing](https://github.com/boesing) already requested internally on how we can make the [CONTRIBUTING.md](https://github.com/laminas/.github/blob/17209d8266a487fbe280d9fac63f63f1b5e43157/CONTRIBUTING.md) and the [CODE_OF_CONDUCT.md](https://github.com/laminas/.github/blob/361a092443d78d33b0f0445bfe4b1ac8e93efc85/CODE_OF_CONDUCT.md) more visible in the components.
 
