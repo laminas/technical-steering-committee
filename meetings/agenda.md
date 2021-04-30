@@ -55,9 +55,10 @@ There are projects which have these files directly stored in all of their compon
 Frank will make a suggestion in form of a pull request for the `Contributors` section on the website.
 
 **Questions**
-Do we want to add links to the `CONTRIBUTORS` and the `CODE_OF_CONDUCT` to the `README.md` of all packages?
-Is there a way of creating **and** merging PRs from CLI for Markdown changes like these? 
-There should be no need to release this as a new version of the package so merging this to the default branch would be enough, right?  
+
+- Do we want to add links to the `CONTRIBUTORS` and the `CODE_OF_CONDUCT` to the `README.md` of all packages?
+- Is there a way of creating **and** merging PRs from CLI for Markdown changes like these? 
+  There should be no need to release this as a new version of the package so merging this to the default branch would be enough, right?  
 
 ### Removal of License File Headers
 
