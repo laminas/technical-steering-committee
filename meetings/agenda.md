@@ -58,3 +58,15 @@ Frank will make a suggestion in form of a pull request for the `Contributors` se
 Do we want to add links to the `CONTRIBUTORS` and the `CODE_OF_CONDUCT` to the `README.md` of all packages?
 Is there a way of creating **and** merging PRs from CLI for Markdown changes like these? 
 There should be no need to release this as a new version of the package so merging this to the default branch would be enough, right?  
+
+### Removal of License File Headers
+
+[Maximilian](https://github.com/boesing) wants to talk about license file headers.
+These are outdated as almost all of them are pointing to the `master` branch of the package which does not exist anymore.
+As we do have the `LICENSE.md` available in each project, there should be no need to point to it from within every file.
+Even tho, having to update the `copyright` header to fit the appropriate "year" is quite annoying.
+
+As Max has plans to integrate source code from non-laminas project (with permission), he can not add the laminas copyright header to that file as the source code was not written by laminas.
+So when removing the license headers from laminas-own licenses, we can easily add non-laminas copyright headers (if present - in the example above there are none) to those files which were originally written by 3rd-party.
+
+**Vote for removing license file headers and (if needed) the removal of `malukenho/docheader` check** 
