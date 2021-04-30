@@ -5,14 +5,14 @@
 
 Please file pull requests to add, or discuss items to add, to the agenda.
 
-## Items to discuss
+## Items to Discuss
 
-### Branch protection
+### Branch Protection
 
 [Filippo Tessarotto](https://github.com/Slamdunk) asks to add branch protection for release branches, see https://github.com/laminas/technical-steering-committee/issues/71
 
 
-### Abandoning laminas-cache satellites (part 2)
+### Abandoning Laminas-Cache Satellites (Part 2)
 
 [Maximilian Bösing](https://github.com/boesing) is working on `laminas-cache` to integrate new GHA workflow but has problems with some storage adapters due the fact that these are not maintainable at all. The TSC did already voted about this [back in november 2020](https://github.com/laminas/technical-steering-committee/blob/main/meetings/minutes/2020-11-02-TSC-Minutes.md#cache-adapters) but the vote was not focussing the abandoning and thus it is brought up again.
 
@@ -32,7 +32,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
   Having these adapters removed will help spending time on those adapters which we can actively support along with proper integration tests within our CI pipeline.
 
-### Contribution guidelines
+### Contribution Guidelines
 
 [Maximilian Bösing](https://github.com/boesing) already requested internally on how we can make the [CONTRIBUTING.md](https://github.com/laminas/.github/blob/17209d8266a487fbe280d9fac63f63f1b5e43157/CONTRIBUTING.md) and the [CODE_OF_CONDUCT.md](https://github.com/laminas/.github/blob/361a092443d78d33b0f0445bfe4b1ac8e93efc85/CODE_OF_CONDUCT.md) more visible in the components.
 
@@ -55,6 +55,19 @@ There are projects which have these files directly stored in all of their compon
 Frank will make a suggestion in form of a pull request for the `Contributors` section on the website.
 
 **Questions**
-Do we want to add links to the `CONTRIBUTORS` and the `CODE_OF_CONDUCT` to the `README.md` of all packages?
-Is there a way of creating **and** merging PRs from CLI for Markdown changes like these? 
-There should be no need to release this as a new version of the package so merging this to the default branch would be enough, right?  
+
+- Do we want to add links to the `CONTRIBUTORS` and the `CODE_OF_CONDUCT` to the `README.md` of all packages?
+- Is there a way of creating **and** merging PRs from CLI for Markdown changes like these? 
+  There should be no need to release this as a new version of the package so merging this to the default branch would be enough, right?  
+
+### Removal of License File Headers
+
+[Maximilian](https://github.com/boesing) wants to talk about license file headers.
+These are outdated as almost all of them are pointing to the `master` branch of the package which does not exist anymore.
+As we do have the `LICENSE.md` available in each project, there should be no need to point to it from within every file.
+Even tho, having to update the `copyright` header to fit the appropriate "year" is quite annoying.
+
+As Max has plans to integrate source code from non-laminas project (with permission), he can not add the laminas copyright header to that file as the source code was not written by laminas.
+So when removing the license headers from laminas-own licenses, we can easily add non-laminas copyright headers (if present - in the example above there are none) to those files which were originally written by 3rd-party.
+
+**Vote for removing license file headers and (if needed) the removal of `malukenho/docheader` check** 
