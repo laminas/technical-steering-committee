@@ -1,6 +1,6 @@
-# Minutes from the 2021-02-01 Laminas Technical Steering Committee Meeting
+# Minutes from the 2021-03-01 Laminas Technical Steering Committee Meeting
 
-- When: 2021-02-01 at 19:00 UTC, until 20:00 UTC
+- When: 2021-03-01 at 19:00 UTC, until 20:00 UTC
 - Where: Laminas Slack #tsc-meeting channel
 - Attending:
   - Abdul Malik Ikhsan
