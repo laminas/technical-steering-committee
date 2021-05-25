@@ -34,6 +34,8 @@ As I do want to "make psalm happy", I can either use the `@psalm-var` inline-ann
 
 The first two options do not execute runtime checks (`assert` won't on production system as `zend.assertion` supposed to be `-1`). The webmozart assertion will execute assertions even tho the assertion will always succeed.
 
+Note that `zend.assertion` should be changed for CI to `1` as by default it's `-1` in `laminas-continuous-integration-action` too, see https://github.com/laminas/laminas-continuous-integration-action/issues/36.
+
 I prefer having `assert` over `@psalm-var` here, as it may fail in unit tests (or on non-production systems) and thus, the assertion will still be verified and not just assumed.
 
 **Questions:**
