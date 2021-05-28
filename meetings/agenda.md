@@ -94,5 +94,5 @@ This said, there should be no reason why we need `locked` dependencies for all P
 
 The switch from Travis to Github Actions has seen Coveralls support not ported.
 
-[Filippo Tessarotto](https://github.com/Slamdunk) ask to re-enable it: having the code-coverage
+[Filippo Tessarotto](https://github.com/Slamdunk) asks to re-enable it: having the code-coverage
 feedback automation is a great value and help for maintainers to evaluate Pull-Requests validity.
