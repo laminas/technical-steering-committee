@@ -7,9 +7,9 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
-### Remove Line Length Limit from Codestandard
+### Remove Line Length Limit from coding standard
 
-[Maximilian Bösing](https://github.com/boesing) wants to drop the line length limit from the `laminas-codestandard` ruleset.
+[Maximilian Bösing](https://github.com/boesing) wants to drop the line length limit from the laminas-coding-standard ruleset.
 
 The line length limit is counter-productive in combination with psalm and more precise argument-/return-type definitions.
 
@@ -25,18 +25,16 @@ $foo = sprintf('foo bar baz %d', 1);
 assert($foo !== '');
 ```
 
-Psalm is not able to verify that `$foo` is a non-empty-string, even tho, the first argument is a non-empty string and therefore, the return value must either be `false` (in case of an error) or `non-empty-string`.
+Psalm is not able to verify that `$foo` is a non-empty-string, even though the first argument is a non-empty-string and therefore, the return value must either be `false` (in case of an error) or `non-empty-string`.
 
-https://psalm.dev/r/add6e2b321
+- https://psalm.dev/r/add6e2b321
 
-I prefer using `assert($foo !== '')` over `Assert::stringNotEmpty` to avoid redundant runtime checks which actually only have to be made to "make psalm happy".
-As I do want to "make psalm happy", I can either use the `@psalm-var` inline-annotation, use `assert` or use `@psalm-assert` (as provided by webmozart `Assert`).
+Max prefers using `assert($foo !== '')` over `Assert::stringNotEmpty` to avoid redundant runtime checks which actually only have to be made to "make psalm happy".
+As we do want to "make psalm happy", we can either use the `@psalm-var` inline-annotation, use `assert` or use `@psalm-assert` (as provided by webmozart `Assert`).
 
-The first two options do not execute runtime checks (`assert` won't on production system as `zend.assertion` supposed to be `-1`). The webmozart assertion will execute assertions even tho the assertion will always succeed.
+The first two options do not execute runtime checks (`assert` won't on production system as `zend.assertion` supposed to be `-1`). The webmozart assertion will execute assertions even though the assertion will always succeed.
 
-Note that `zend.assertion` should be changed for CI to `1` as by default it's `-1` in `laminas-continuous-integration-action` too, see https://github.com/laminas/laminas-continuous-integration-action/issues/36.
-
-I prefer having `assert` over `@psalm-var` here, as it may fail in unit tests (or on non-production systems) and thus, the assertion will still be verified and not just assumed.
+Max prefers having `assert` over `@psalm-var` here, as it may fail in unit tests (or on non-production systems) and thus, the assertion will still be verified and not just assumed.
 
 **Questions:**
 
@@ -47,6 +45,7 @@ I prefer having `assert` over `@psalm-var` here, as it may fail in unit tests (o
 ### Locked Dependencies for All Supported PHP Versions
 
 [Maximilian](https://github.com/boesing) wants to talk about the current CI matrix.
+
 Lately, we encountered some issues with different 3rd party libraries due to the fact that these are way more strict in dropping PHP versions along with major bumps.
 
 This makes it almost impossible to have a `composer.lock` which will be valid for **all** PHP versions (`7.3`, `7.4`, `8.0` so far).
@@ -75,7 +74,7 @@ That guide says:
 
 > Using PHP 7.4, run composer update
 
-So even tho, the component had support for PHP 7.3, some packages might be ended up having a `.laminas-ci.json` with these contents:
+So even though the component had support for PHP 7.3, some packages might be ended up having a `.laminas-ci.json` with these contents:
 
 ```json
 {
@@ -94,5 +93,4 @@ This said, there should be no reason why we need `locked` dependencies for all P
 
 The switch from Travis to Github Actions has seen Coveralls support not ported.
 
-[Filippo Tessarotto](https://github.com/Slamdunk) asks to re-enable it: having the code-coverage
-feedback automation is a great value and help for maintainers to evaluate Pull-Requests validity.
+[Filippo Tessarotto](https://github.com/Slamdunk) asks to re-enable it: having the code-coverage feedback automation is a great value and helps maintainers evaluate pull-request validity.
