@@ -1,6 +1,6 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2021-06-14
+- Date: 2021-07-12
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
@@ -105,40 +105,64 @@ The reason for such a response is that people still rely on `Zend\` classes in t
 
 There may be a better solution to this though, which allows removal in a new **minor** release.
 
-Here's an example for a hypotetical `laminas/laminas-xyz` package:
+Here's an example for a hypothetical `laminas/laminas-xyz` package:
 
- 1. remove the `{"replace": {"zendframework/zend-xyz": "self.version"}}` `replace`: block from `composer.json`:
-    ```diff
-    {
-        ...
-    -    "replace": {
-    -        "zendframework/zend-xyz": "self.version"
-    -    }
-    }
-    ```
-    
- 2. add a `conflict` with the old package in `composer.json`:
-    ```diff
-    {
-        ...
-    +    "conflict": {
-    +        "zendframework/zend-xyz": "*"
-    +    }
-    }
-    ```
- 3. remove the `laminas/laminas-zendframework-bridge` dependency:
-    ```diff
-    {
-        ...
-        "require": {
-            ...
-    -        "laminas/laminas-zendframework-bridge": "^1.0"
-        }
-    }
-    ```
- 5. release under a new **minor** version (the `y` in `x.y.z`)
+1. remove the `{"replace": {"zendframework/zend-xyz": "self.version"}}` `replace`: block from `composer.json`:
+
+   ```diff
+   {
+       ...
+   -    "replace": {
+   -        "zendframework/zend-xyz": "self.version"
+   -    }
+   }
+   ```
+
+2. add a `conflict` with the old package in `composer.json`:
+
+   ```diff
+   {
+       ...
+   +    "conflict": {
+   +        "zendframework/zend-xyz": "*"
+   +    }
+   }
+   ```
+
+3. remove the `laminas/laminas-zendframework-bridge` dependency:
+
+   ```diff
+   {
+       ...
+       "require": {
+           ...
+   -        "laminas/laminas-zendframework-bridge": "^1.0"
+       }
+   }
+   ```
+
+4. release under a new **minor** version (the `y` in `x.y.z`)
 
 The proposed approach allows us to get a clean upgrade path for people that already use `laminas/*` packages, and already migrated away from the abandoned `zendframework/` packages.
 
 People migrating from `zendframework/*` packages to `laminas/*` will still be able to use earlier **minor** releases of `laminas/*`, which we did release with the compatibility layer enabled.
-    
+
+### Require `GITHUB_TOKEN` permission to be explicitly specified in GHA workflow files
+
+Permissions for `GITHUB_TOKEN` are [too broad and provide write access to a number of scopes](https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token) when action is run in a privileged context of a maintainer. Such privileged context is invoked, for example, on branch push event after the PR was merged. This poses a security risk in case of supply chain attack or vulnerability in invoked dependencies (eg [CVE-2021-29472 for Composer](https://nvd.nist.gov/vuln/detail/CVE-2021-29472))
+
+I propose to make [permissions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions) field mandatory in all workflow files in all Laminas repositories with only required privileges specified for the specific workflow.
+
+> ```yaml
+> permissions:
+>   actions: read|write|none
+>   checks: read|write|none
+>   contents: read|write|none
+>   deployments: read|write|none
+>   issues: read|write|none
+>   packages: read|write|none
+>   pull-requests: read|write|none
+>   repository-projects: read|write|none
+>   security-events: read|write|none
+>   statuses: read|write|none
+> ```
