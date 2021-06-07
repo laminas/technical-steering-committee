@@ -89,3 +89,10 @@ So even tho, the component had support for PHP 7.3, some packages might be ended
 ```
 
 This said, there should be no reason why we need `locked` dependencies for all PHP versions.
+
+### Enable Coveralls support in laminas-continuous-integration-action
+
+The switch from Travis to Github Actions has seen Coveralls support not ported.
+
+[Filippo Tessarotto](https://github.com/Slamdunk) asks to re-enable it: having the code-coverage
+feedback automation is a great value and help for maintainers to evaluate Pull-Requests validity.
