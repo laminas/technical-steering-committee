@@ -1,6 +1,6 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2021-06-07
+- Date: 2021-06-14
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
@@ -94,3 +94,51 @@ This said, there should be no reason why we need `locked` dependencies for all P
 The switch from Travis to Github Actions has seen Coveralls support not ported.
 
 [Filippo Tessarotto](https://github.com/Slamdunk) asks to re-enable it: having the code-coverage feedback automation is a great value and helps maintainers evaluate pull-request validity.
+
+### Remove `laminas/laminas-zendframework-bridge` dependency from our packages
+
+Over the past few weeks, we received multiple reports of people requesting us to drop `laminas/laminas-zendframework-bridge`
+from our packages.
+
+Our (TSC) response so far has been that we cannot do this until a new major version is released.
+The reason for such a response is that people still rely on `Zend\` classes in their codebases, and therefore removal of `laminas/laminas-zendframework-bridge` could constitute a BC break for them, when a `laminas/` package substitutes a `zendframework/` one.
+
+There may be a better solution to this though, which allows removal in a new **minor** release.
+
+Here's an example for a hypotetical `laminas/laminas-xyz` package:
+
+ 1. remove the `{"replace": {"zendframework/zend-xyz": "self.version"}}` `replace`: block from `composer.json`:
+    ```diff
+    {
+        ...
+    -    "replace": {
+    -        "zendframework/zend-xyz": "self.version"
+    -    }
+    }
+    ```
+    
+ 2. add a `conflict` with the old package in `composer.json`:
+    ```diff
+    {
+        ...
+    +    "conflict": {
+    +        "zendframework/zend-xyz": "*"
+    +    }
+    }
+    ```
+ 3. remove the `laminas/laminas-zendframework-bridge` dependency:
+    ```diff
+    {
+        ...
+        "require": {
+            ...
+    -        "laminas/laminas-zendframework-bridge": "^1.0"
+        }
+    }
+    ```
+ 5. release under a new **minor** version (the `y` in `x.y.z`)
+
+The proposed approach allows us to get a clean upgrade path for people that already use `laminas/*` packages, and already migrated away from the abandoned `zendframework/` packages.
+
+People migrating from `zendframework/*` packages to `laminas/*` will still be able to use earlier **minor** releases of `laminas/*`, which we did release with the compatibility layer enabled.
+    
