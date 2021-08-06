@@ -4,13 +4,13 @@
 - Attending:
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
-  - Frank Brüchner
+  - Frank Brückner
   - Geert Eltink
   - Luís Cobucci
   - Marco Pivetta
   - Matthew Setter
   - Matthew Weier O'Phinney
-  - Max Bösing
+  - Maximilian Bösing
   - Michał Bundyra
 
 Quorum was met (10 out of 15 members were present).

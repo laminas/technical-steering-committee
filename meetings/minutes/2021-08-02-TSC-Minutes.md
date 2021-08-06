@@ -6,12 +6,12 @@
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
   - Andreas Heigl (left shortly after 20:00)
-  - Frank Brüchner
+  - Frank Brückner
   - Luís Cobucci (left shortly after 20:00)
   - Marco Pivetta
   - Matthew Setter (started shortly after 20:00)
   - Matthew Weier O'Phinney
-  - Max Bösing
+  - Maximilian Bösing
   - Michał Bundyra
 
 Quorum was met (8 out of 15 members were present were present at any given point).
