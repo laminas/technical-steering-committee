@@ -152,8 +152,9 @@ We just need a volunteer to make it happen.
 
 ### laminas-db Maintainer Vote
 
-Per [#73](/laminas/technical-steering-committee/issues/73), we have three laminas-db maintainer nominations to vote on, and [Matthew](https://github.com/weierophinney) suggests doing it during the meeting to expedite the vote.
-As a reminder, the individuals nominated are:
+Per [#73](https://github.com/laminas/technical-steering-committee/issues/73), we have three laminas-db maintainer
+nominations to vote on, and [Matthew](https://github.com/weierophinney) suggests doing it during the meeting to expedite
+the vote. As a reminder, the individuals nominated are:
 
 - [Massi Cavicchioli (@MassiCav)](https://github.com/MassiCav)
 - [Clark Everetts (@clarkphp)](https://github.com/clarkphp)
