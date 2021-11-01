@@ -1,6 +1,6 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2021-09-06 or 2021-09-13 (TBD)
+- Date: 2021-11-01
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
@@ -46,3 +46,13 @@ What we should discuss during the TSC meeting is if we want to:
 A possible different solution could be to have an action which checks for PHP deprecations only, may fail and if it fails, an issue is created in the repository so we are at least aware of that there are deprecations which should be addressed.
 
 There are actually ways to mark actions as required or optional via branch protection rules. Maybe this is something we can do when adding support for new PHP versions.
+
+### Where would we like to invest?
+
+We have accumulated close to $20k (USD) in donation so far, and should start thinking of where we want to invest them.
+Some ideas include:
+
+- Providing stipends/honorariums to maintainers.
+- Sponsoring user groups and/or conferences.
+- Funding some short-term, targetted initiatives (e.g., finishing up and releasing MVC 4, creating documentation tutorials, OpenAPI parsers/generators, etc.)
+- Creating swag to send to contributors.
