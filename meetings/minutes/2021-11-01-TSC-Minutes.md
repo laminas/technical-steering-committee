@@ -138,5 +138,5 @@ Andreas suggested paying somebody to bring the documentation up to speed, which 
 Rob went on to suggest CLI tooling: things like CRUD scaffolding, code generation from OpenAPI specifications, etc.
 His point is that better documentation, adding videos, and providing more tooling will help us attract and keep users.
 
-At this point, people were neeing to leave.
+At this point, people were needing to leave.
 Matthew suggested that we potentially do a quick community survey to see what people would find most valuable, so we can start putting money towards those initiatives.
