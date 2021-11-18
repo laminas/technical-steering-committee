@@ -103,7 +103,7 @@ There are actually ways to mark actions as required or optional via branch prote
 Maybe this is something we can do when adding support for new PHP versions.
 
 [Andreas](https://github.com/heiglandreas) suggested we create a mechanism to convert deprecations into issue reports, so that we can tackle them separately from other work.
-Luís (https://github.com/lcobucci) favors option 1 and would not recommend option 2, for the same reasons Matthew argued; he also notes that in some cases, what we are treating are deprecations triggered by external dependencies.
+[Luís](https://github.com/lcobucci) favors option 1 and would not recommend option 2, for the same reasons Matthew argued; he also notes that in some cases, what we are treating are deprecations triggered by external dependencies.
 Aleksei noted that we even sometimes trigger deprecation notices ourselves, and have traditionally had tests that validate this fact. Nobody felt that option 2 was viable.
 
 Luís suggests that while we could make option 1 the rule, we could and likely should still setup CI on a schedule, and have it report deprecations as issues.
