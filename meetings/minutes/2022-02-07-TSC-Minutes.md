@@ -1,11 +1,11 @@
-# Minutes from the 2022-01-10 Laminas Technical Steering Committee Meeting
+# Minutes from the 2022-02-07 Laminas Technical Steering Committee Meeting
 
 - When: 2022-02-07 at 19:00 UTC, until 19:57 UTC
 - Where: Laminas Slack #tsc-meeting channel
 - Attending:
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
-  - Frank Bruchner
+  - Frank Brückner
   - Geert Eltink
   - Marco Pivetta
   - Matthew Weier O'Phinney
@@ -47,7 +47,8 @@ Matthew summarized what needs to happen:
 
 1. We need to update the CI container to strip `config.platform.php` settings before executing jobs.
 2. We need to add an org-level workflow CI definition that we can then reference in repo-level workflows.
-3. We need to update individual repos to (a) add the config.platform.php value, (b) update the lockfile, and (c) update the CI workflow.
+3. We need to update individual repos to (a) add the `config.platform.php` value, (b) update the lockfile, and (c)
+   update the CI workflow.
 4. We enable Renovate on all repos we touch for (3).
 
 Matthew volunteered to do 1 and 2.
@@ -66,9 +67,9 @@ Per a contributor and user:
 - We have 3 non active mainteners on "laminas-db" project.
 - Last merge was 4 months ago.
 - Version 3 is not developed since 31 Dec 2019.
-- Unit tests have errors.
-  Volunteer developers cannot complete the quest with CI on github and stop making contributions.
-  For example, in laminas/laminas-db#232, the comment was changed, but the test failed!
+- Unit tests have errors. Volunteer developers cannot complete the quest with CI on github and stop making
+  contributions. For example, in [laminas/laminas-db#232](https://github.com/laminas/laminas-db/pull/232), the comment
+  was changed, but the test failed!
   Give us local instrument for run tests (the best is Docker images on official repository).
 - Tests for Oracle are not support on CI.
 
