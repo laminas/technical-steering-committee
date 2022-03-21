@@ -65,6 +65,11 @@ This will also provide a way to migrate our own implementations and 3rd-party de
 - [laminas-hydrator](https://github.com/laminas/laminas-hydrator/blob/bb206b06377092982987a018d34243579eed5482/src/HydratorPluginManager.php#L21)
 - [laminas-serializer](https://github.com/laminas/laminas-serializer/blob/f5d9e0e0f56bc92acdfd7a2aa8212940d6edbcee/src/AdapterPluginManager.php#L28)
 - [laminas-inputfilter](https://github.com/laminas/laminas-inputfilter/blob/5d8986654c8b455192cd180985634f9eacf56501/src/InputFilterPluginManager.php#L23)
+- [laminas-crypt](https://github.com/laminas/laminas-crypt/blob/ad47c5def3da287786b61d4f21a5e6f423c44a9f/composer.json#L24)
+
+There is an organisation project related to the removal of [container-interop](https://github.com/orgs/laminas/projects/19) and thus an overview of issues does exist. Projects which do not have an issue do not need changes but might still be affected in upstream projects in case these projects provided factories for their plugins.
+
+Max created a [PoC composer package](https://github.com/boesing/container-interop-replacement) which handles the replacement of `container-interop` by using aliases. The only thing which is open in this component is to declare a conflict with `laminas-servicemanager` versions which do still use `container-interop`.
 
 Most of these plugin managers do not provide factories but might still be used by upstream projects which do use factories using the interop interface.
 
