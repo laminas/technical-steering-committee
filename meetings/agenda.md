@@ -18,3 +18,9 @@ So questions are:
  - Should we abandon both packages? 
  - What components do still rely on the bridge?
  - Should we release a new version of these components relying on the bridge so they're not blocking upstream projects getting rid of the bridge?
+
+### Possibilities for project backers
+
+In the early TSC-meetings the funding of the project as well as possibilities for backers were discussed. A thing I remember, but cannot find in the minutes, was some idea project backers to be listed in some form on the website. Maybe it was in connection with a list of "official" agencies providing support.
+
+The topic has not been discussed recently. I would like to know if there are any news on this? 
