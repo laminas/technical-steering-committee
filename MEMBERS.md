@@ -10,7 +10,7 @@ Last updated: 2020-06-01
 - Geert Eltink ([@geerteltink](https://github.com/geerteltink))
 - Andreas Heigl ([@heiglandreas](https://github.com/heiglandreas))
 - Gary Hockin ([@geeh](https://github.com/geeh))
-- Gary Lockett ([@ise](https://github.com/internalsystemerror))
+- Gary Lockett ([@internalsystemerror](https://github.com/internalsystemerror))
 - Abdul Malik Ikhsan ([@samsonasik](https://github.com/samsonasik))
 - Aleksei Khudiakov ([@Xerkus](https://github.com/Xerkus))
 - Marco Pivetta ([@Ocramius](https://github.com/Ocramius))
