@@ -41,3 +41,10 @@ We do have two options as of november this year:
 2. remove `composer/package-versions-deprecated` and require `composer-runtime-api` v2. This will ensure, that we can use `\Composer\InstalledVersions` without the need of any 3rd-party component.
 
 **Question is:** Do we want to start requiring composer v2 in our components when it comes to features like `\Composer\InstalledVersions` or should we still allow composer v1 even if we started to drop composer v1 in our composer plugins?
+
+### New laminas maintainers
+
+[Marco Pivetta](https://github.com/Ocramius/) vouches to include following people in our TSC roster:
+
+ * [George Steel](https://github.com/gsteel/)
+ * [Gary Lockett](https://github.com/internalsystemerror)
