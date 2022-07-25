@@ -18,3 +18,43 @@ Since that is actually the main job of both actions (to be in sync when it comes
 This has to be first implemented in the `laminas-continuous-integration-action` before it can be added to the `laminas-ci-matrix-action` (or we need at least a synchronized release).
 
 Lets gather some ideas on how this could look as we have to create dedicated releases per action. Having projects to update their workflows because we create a monorepo should be avoided.
+
+### Slack and Greetbot service changes
+
+- Submitted by [Matthew Weier O'Phinney](https://github.com/weierophinney)
+
+We've been using Slack for years, and it works fine.
+The main rationale for using it over other solutions has been:
+
+- Ease of use over older protocols like IRC.
+- Famililarity in the ecosystem.
+- Works via standard web ports (specifically 443), preventing issues with corporate firewalls.
+
+Along with Slack, we've been using a service called Greetbot since we renamed to Laminas.
+Greetbot messages a user after they've first registered, providing them with a welcome message, and a list of handy links (documentation, website, forums, etc.)
+
+Today, both services are having some significant changes.
+
+- Greetbot ends service mid-August.
+- Slack has changed from having a maximum allowed history **size** (10k messages) for organizations on the free plan to a maximum allowed history **duration** (90 days).
+  Currently, it appears our messages expire somewhere in the 4-6 month range; **as of today, anything older than 90 days expires.**
+
+At the time we chose Slack, a number of folks argued we should use Discord, but quite a few folks argued against it indicating their place of business restricted access to it as it was considered a "gaming" site.
+However, that landscape has changed dramatically over the years; in fact, even Google is [using Discord as the primary communication forum for Carbon](https://thenewstack.io/google-launches-carbon-an-experimental-replacement-for-c/) (its recently announced C++ alternative/succesor).
+As a result, it's increasingly rare to have bans on Discord within companies, particularly those doing software development.
+
+Two key reasons for us to consider moving to Discord: there are no message limits, and it offers welcome message templates by default already, without requiring any additional services.
+Additionally, it has far better moderation tools; in fact, we can even require users to verify they've read our code of conduct before they can complete registration.
+It does, however, miss a few other features that Slack gives us (threading and reminders in particular).
+
+I see a few different routes we could go:
+
+- Keep Slack.
+  If we do, we'll need to remember that anything older than 90 days disappears.
+  We'll also need a Greetbot replacement (best one I've found with a free plan is [CommonRoom](https://www.commonroom.io/pricing/)).
+- Migrate to Discord.
+  If we do this, we'll need to setup our welcome message templates (I already have them from Greetbot), and:
+  - Update our GitHub webhook on laminas.dev to talk to Discord.
+  - Somehow migrate our users to the new system. (We'd need a plan.)
+
+I'd like to begin discussions, with a goal of, at the minimum, determining how we will address welcome messages when Greetbot closes doors.
