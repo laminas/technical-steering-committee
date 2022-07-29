@@ -7,6 +7,12 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
+### Short(!) feedback on open issues:
+* https://github.com/laminas/technical-steering-committee/issues/69 - Linux Foundation has been able to set up email-aliases so at this point in time there's no need to switch email-providers.
+* https://github.com/laminas/technical-steering-committee/issues/71 - Adding branch protection to all repositories - Is this something that we want to do? If so: let's put that onto the agenda for the september-meeting and invite @Slamdunk for that.
+* https://github.com/laminas/technical-steering-committee/issues/68 - @mwop wrote down notes and tasks as follow up to marking packages as security only. Are these notes still up-to-date? Or can this be closed by now?
+* https://github.com/laminas/technical-steering-committee/issues/6 / https://github.com/laminas/laminas-mvc/issues/41 - Some links to LaminasSkeletonModules are/were broken: what is the actual state here? Docs are vital to the projects success and broken tutorials are worse than no tutorials at all. Do we need to improve here?
+
 ### Laminas Continuous Integration Actions
 
 As of today, we do maintain `laminas-ci-matrix-action` and `laminas-continuous-integration-action` in separate repositories.
