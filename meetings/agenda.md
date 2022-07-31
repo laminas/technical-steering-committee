@@ -64,3 +64,9 @@ I see a few different routes we could go:
   - Somehow migrate our users to the new system. (We'd need a plan.)
 
 I'd like to begin discussions, with a goal of, at the minimum, determining how we will address welcome messages when Greetbot closes doors.
+
+### Coding style new major release
+
+In the laminas/laminas-coding-standard#75 there are BC breaks in the slevomat ruleset dependency. A rule rename affected us and there are a few more breaks, which do not affect us. Since we (should) lock to minor versions `~2.3.0`, it does not make a difference if we release 2.4 or 3.0 as we (or renovate) need to update all packages either way.
+
+To prevent upgrade issues and supporting multiple versions, the preference would be create a 3.0 release.
