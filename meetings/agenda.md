@@ -70,3 +70,27 @@ I'd like to begin discussions, with a goal of, at the minimum, determining how w
 In the laminas/laminas-coding-standard#75 there are BC breaks in the slevomat ruleset dependency. A rule rename affected us and there are a few more breaks, which do not affect us. Since we (should) lock to minor versions `~2.3.0`, it does not make a difference if we release 2.4 or 3.0 as we (or renovate) need to update all packages either way.
 
 To prevent upgrade issues and supporting multiple versions, the preference would be create a 3.0 release.
+
+### Commercial Vendor Program application
+
+We have received our first outside application:
+
+```text
+twitter:  @dotkernel
+Laminas slack username: arhimede
+
+I am the CTO of the company Apidemia   
+https://www.apidemia.com/
+
+We develop our own collection of applications and packages on top of Mezzio and Laminas 
+https://www.dotkernel.com/
+
+We have been  using  Zend Framework  since the very beginning,.
+On  a  side note, we are keeping up and running the last PEAR ZF 1 channel 
+http://pear.dotkernel.com/
+
+Since our main business line is providing Consulting and Development service using Mezzio//Laminas, I
+think that we can benefit from being listed on the Commercial Vendor Program page.
+```
+
+Per our application process, the next step is to vote on the application; if approved, they will need to provide proof of donation before we list them.
