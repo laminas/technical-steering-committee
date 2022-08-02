@@ -134,10 +134,12 @@ Matthew W suggested that we probably should have a different rule for laminas-co
 This was met with agreement.
 
 Max and Geert wondered if we should be pinning the _dependencies_ for laminas-coding-standard to minor versions as well, to prevent breakage.
+Geert suggested going so far as to pin to patch versions, as he's encountered BC breaks/bugs between patch versions on more than one occasion.
 
 #### Decision
 
 We decided to roll a new major, and start pinning dependencies to minor releases to prevent future headaches.
+We will pin phpcs itself to patch versions.
 
 ### Commercial Vendor Program application
 
