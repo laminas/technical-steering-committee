@@ -23,7 +23,7 @@ When creating a new major, the relevant branch is created; it is also set as the
 
 Contributors and renovate, will attempt to make bugfixes to this new major when they equally apply to the previous (current latest release) major.
 
-I (ed: George Steel) propose that the default branch should only be changed to the new major branch, once a release has been tagged for that new major.
+I (ed: Gary Lockett) propose that the default branch should only be changed to the new major branch, once a release has been tagged for that new major.
 
 #### Discussion
 
@@ -35,7 +35,9 @@ Matthew volunteered to create an issue on the automatic-releases repo to request
 
 ### Security only packages and dependency updates
 
-Is this intention for security only packages to eventually be abandoned? If no, then should we (I) look at ways to allow renovate to keep these up to date, if only to give us warning when the package may actually need maintenance. Currently any PR would be automatically closed, including the "Configure Renovate" PRs.
+Is this intention for security only packages to eventually be abandoned? If no, then should we look at ways to allow renovate to keep these up to date, if only to give us warning when the package may actually need maintenance. Currently any PR would be automatically closed, including the "Configure Renovate" PRs.
+
+(Submitted by Gary Lockett.)
 
 #### Discussion
 
