@@ -1,6 +1,6 @@
 # Minutes from the 2022-09-12 Laminas Technical Steering Committee Meeting
 
-- When: 2022-00-12 at 19:00 UTC, until 20:36 UTC
+- When: 2022-09-12 at 19:00 UTC, until 20:36 UTC
 - Where: Laminas Slack #tsc-meeting channel
 - Attending:
   - Abdul Malik Ikhsan
