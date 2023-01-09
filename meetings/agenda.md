@@ -58,7 +58,7 @@ Since `laminas-mvc` seems to be almost dead in favor of `mezzio`, `laminas-api-t
 
 Since these changes have to be a new major version PLUS there can't be any migration path (as `laminas-mvc` is too far away from `mezzio`), the rewrite would only provide a "new" `api-tools` just for `mezzio`.
 
-[Marco](https://github.com/Ocramius) already pointed out, that there are better projects out there (explicitly mentioned API platform) and thus a new `api-tools` platform would be both very time-consuming due to the refactoring (to make it compatible with `mezzio`) while not beneficial for projects which are already using `api-tools`.
+[Aleksei](https://github.com/Xerkus) already pointed out, that there are better projects out there (explicitly mentioned API platform) and thus a new `api-tools` platform would be both very time-consuming due to the refactoring (to make it compatible with `mezzio`) while not beneficial for projects which are already using `api-tools`.
 
 Therefore, the rewrite of `laminas-api-tools` will be only consumed in new projects starting fresh.
 
