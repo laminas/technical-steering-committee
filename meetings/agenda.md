@@ -21,3 +21,5 @@ However, as we already know, when using `ContainerInterface#get` with i.e. the v
 This item is brought to the TSC meeting to outline if we want to:
 - allow `mixed` in the future to be returned from all factories (thats esp. helpful when it comes to the nullable `instanceOf` inheritance type in `AbstractPluginManager`)
 - want to enforce `array|object` as the return type of `ServiceManager#get` which might have impact on upstream projects returning whatever value from their factories
+
+As a sidenote, `symfony` did limit the return values of their `ContainerInterface` to `null|object`. If we want to go down that route as well, we need to find a way on how to proceed with the merged application config.
