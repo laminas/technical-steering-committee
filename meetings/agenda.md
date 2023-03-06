@@ -23,3 +23,15 @@ This item is brought to the TSC meeting to outline if we want to:
 - want to enforce `array|object` as the return type of `ServiceManager#get` which might have impact on upstream projects returning whatever value from their factories
 
 As a sidenote, `symfony` did limit the return values of their `ContainerInterface` to `null|object`. If we want to go down that route as well, we need to find a way on how to proceed with the merged application config.
+
+### Unification of efforts in developing an API application based on Mezzio
+
+We are actively developing, maintaining and using in production a simple REST API project , built around Mezzio API skeleton proposed by 
+@ezimuel 5 years ago. 
+
+The repository is here : https://github.com/dotkernel/api
+
+What if we join the efforts,  Laminas and Dotkernel, to have only one production-ready REST API , and build from there a replacement of 
+laminas-api-tools.
+
+I am ready to move the repository under Mezzio organisation, and provide part time developers to handle the future development. 
