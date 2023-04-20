@@ -1,28 +1,23 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2023-04-03
+- Date: 2023-05-08
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
 
-### Nomination of DotKernel team members to join Laminas organization:
+### DotKernel members' contribution to Laminas/Mezzio packages
+Since the last TSC (April 2023), DotKernel members started creating PRs to various Laminas/Mezzio packages.
 
-As per this [recommendation](https://github.com/laminas/technical-steering-committee/issues/135) from last TSC meeting, [arhimede](https://github.com/arhimede) nominated the following developers:
+See a couple of examples:
+- https://github.com/mezzio/mezzio-session-ext/pull/48
+- https://github.com/mezzio/mezzio-hal/pull/78
+- https://github.com/mezzio/mezzio/pull/151
 
-- [arhimede](https://github.com/arhimede)
-- [alexmerlin](https://github.com/alexmerlin)
-- [MarioRadu](https://github.com/MarioRadu)
+Most of our PRs fail due to the latest modifications introduced in PHPUnit:
+- `PHPUnit [8.x, lowest]` checks **pass**
+- `PHPUnit [8.x, locked]` checks **pass**
+- `PHPUnit [8.x, latest]` checks **fail** because currently the latest version of PHPUnit is 10.1.x, which contains BC breaks
 
-Since then, each of these members has contributed to a Laminas package of their choice. Below, you can find their pull requests:
-
-- arhimede: https://github.com/laminas/laminas-paginator/pull/56
-- alexmerlin: https://github.com/laminas/laminas-json-server/pull/33
-- MarioRadu: https://github.com/laminas/laminas-migration/pull/76
-
-### Move DotKernel API under Laminas vs keep under DotKernel organization
-
-During the last TSC meeting the idea of moving [DotKernel API](https://github.com/dotkernel/api) under Laminas organization has been raised.
-
-This idea should be discussed further in this meeting.
-
-[Here](https://www.dotkernel.com/dotkernel3/dotkernel-api-architecture-components/) you can read more about DotKernel API.
+Our suggestions for the `PHPUnit [8.x, latest]` check:
+- temporarily limit PHPUnit to version 10.0.*
+- temporarily disable this check, until PHPUnit sorts this out on their end
