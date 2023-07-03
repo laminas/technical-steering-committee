@@ -38,3 +38,10 @@ Reducing the amount of serializers within laminas-serializer would reduce mainte
 - Do we want to continue maintaining `laminas-serializer`?
 - If the answer is `yes`, do we want to continue supporting niche serializers such as `PythonPickle`, `wddx`, etc.?
 
+### Fig Cookies Dependency
+
+[dflydev-fig-cookies](https://github.com/dflydev/dflydev-fig-cookies) is used by a handful of Mezzio and Laminas components and seems to be un-maintained. It's currently holding back at least 2 packages from adopting `psr/http-message:2.0`: mezzio-authentication-session and laminas.dev - Obviously, `mezzio-session` depends on this package also, therefore, any Mezzio project that uses sessions is stuck on psr/http-message:1.0
+
+- Does anyone know the maintainer, and can reach out to get this package updated?
+- Is it desirable or feasible to fork, release and maintain in-house?
+- Does anyone know of an alternative lib that solves the same problem that we could adopt instead?
