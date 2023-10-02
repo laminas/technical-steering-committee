@@ -30,3 +30,15 @@ We need projects per Org to keep track of PHP 8.3 migration progress. Do we want
 
 What about renovate? Renovate will help us to migrate to PHP 8.3 as far as I understood correct.
 Is it possible to tell renovate to actually add PRs created by renovate to the PHP 8.3 projects (once created) mentioned above?
+
+### Migrate from X/Twitter to Mastodon
+
+We can no longer automate posting to Twitter, er, X, or Xitter, whatever, due to changes in the pricing model for the API.
+This means any posting we do MUST be done manually, from Twitter or Tweetdeck, and, further, sharing credentials is becoming increasingly difficult.
+On top of that, continued usage of the platform is de facto endorsement of a far-right, fascist agenda promoted by the owner of the platform.
+
+Matthew W suggests:
+
+- We immediately disable and/or delete our account on Xitter.
+- We consider creating an account on phpc.social.
+- We audit what automations we had in place for Twitter (e.g. release announcements, Slack integration) and determine what, if any, we want to move to the new account.
