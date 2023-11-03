@@ -10,6 +10,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 ### Abandon `laminas-crypt`
 
 In [laminas-crypt#32](https://github.com/laminas/laminas-crypt/pull/32) @Xerkus writes:
+
 > This component is security only. Since it has no maintainer and it is a security oriented component may be it should be abandoned instead.
 > 
 > ...
@@ -24,3 +25,9 @@ Components that [currently depend](https://github.com/laminas/laminas-crypt/netw
 - laminas-mail ([Release 2.24.0](https://github.com/laminas/laminas-mail/releases/tag/2.24.0) removes dependency)
 - laminas-filter _(Version 3 [unreleased], will no longer depend on it)_
 - laminas-authentication [PR #55](https://github.com/laminas/laminas-authentication/pull/55) negates dependency requirement but needs review on whether the approach is acceptable.
+
+### Proposal to abandon and archive [laminas-twitter](https://github.com/laminas/laminas-twitter)?
+
+George Steel asks, is it feasible to continue to support this library now that read access is a paid only feature?
+
+`laminas-twitter` also depends on `laminas-crypt` which may or may not be considered for abandonment too.
