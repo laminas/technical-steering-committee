@@ -31,3 +31,7 @@ Components that [currently depend](https://github.com/laminas/laminas-crypt/netw
 George Steel asks, is it feasible to continue to support this library now that read access is a paid only feature?
 
 `laminas-twitter` also depends on `laminas-crypt` which may or may not be considered for abandonment too.
+
+## Abandon `laminas-oauth`
+
+George Steel proposes we also abandon laminas-oath, as it is only used by laminas-twitter internally.
