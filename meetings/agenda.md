@@ -34,4 +34,4 @@ George Steel asks, is it feasible to continue to support this library now that r
 
 ## Abandon `laminas-oauth`
 
-George Steel proposes we also abandon laminas-oath, as it is only used by laminas-twitter internally.
+George Steel proposes we also abandon laminas-oauth, as it is only used by laminas-twitter internally.
