@@ -5,7 +5,7 @@
 - Attending:
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
-  - Frank Brüchner
+  - Frank Brückner
   - Geert Eltink
   - Luís Cobucci
   - Marco Pivetta

@@ -5,7 +5,7 @@
 - Attending:
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
-  - Frank Bruchner
+  - Frank Brückner
   - Matthew Weier O'Phinney
   - Maximilian Bösing
   - Michał Bundyra
