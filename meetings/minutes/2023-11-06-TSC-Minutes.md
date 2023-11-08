@@ -6,7 +6,7 @@
   - Abdul Malik Ikhsan
   - Aleksei Khudiakov
   - Andreas Heigl
-  - Frank Bruchner
+  - Frank Brückner
   - George Steel
   - Matthew Weier O'Phinney
   - Maximilian Bösing
