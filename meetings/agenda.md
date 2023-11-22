@@ -7,3 +7,4 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
+- Add Matthew Setter as laminas-mime maintainer
