@@ -7,4 +7,4 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
-- Add Matthew Setter as laminas-mime maintainer
+- Whether to add Slamdunk and settermjd as laminas-mime and laminas-mail mainteiners or to mark laminas-mail as a security only package.
