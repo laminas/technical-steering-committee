@@ -10,3 +10,9 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 - Whether to add Slamdunk and settermjd as laminas-mime and laminas-mail mainteiners or to mark laminas-mail as a security only package.
 - Whether add https://github.com/Roave/BackwardCompatibilityCheck as a default job to be run in the `laminas-ci-matrix > laminas-continuous-integration` CI
 - Whether to abandon [laminas/laminas-pimple-config](https://github.com/laminas/laminas-pimple-config) - Pimple last had a [release in October 2021](https://github.com/silexphp/Pimple/tags), Package stats for [laminas-pimple-config](https://packagist.org/packages/laminas/laminas-pimple-config/stats).
+
+### PHPCS is being abandoned/forked
+
+For more context, [this issue](https://github.com/squizlabs/PHP_CodeSniffer/issues/3932) by [@jrfnl](https://github.com/jrfnl) effectively announces the fork and the probable (?) abandonment of the source package.
+
+[Slevomat CS has indicated they will switch to the fork](https://github.com/slevomat/coding-standard/issues/1640). 
