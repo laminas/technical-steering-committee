@@ -17,7 +17,7 @@
   - Michał Bundyra
   - Rob Allen
 
-Quroum WAS met (12 out of 15 members were present).
+Quroum WAS met (13 out of 15 members were present).
 
 ## Agenda
 
