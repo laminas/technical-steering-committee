@@ -14,7 +14,7 @@ Please file pull requests to add, or discuss items to add, to the agenda.
     https://github.com/laminas/technical-steering-committee/blob/main/meetings/minutes/2023-04-03-TSC-Minutes.md
 
 What was changed in Dotkernel organisation related to API
-- there is a new dedicated website only for Dotkermel API, which is our main focus [dotkernel.org ](https://www.dotkernel.org/)
+- there is a new dedicated website only for Dotkernel API, which is our main focus [dotkernel.org ](https://www.dotkernel.org/)
 - there is now a compiled documentation, up to date, for the API and all components and libraries [docs.dotkernel.org ](https://docs.dotkernel.org/)
 - it was integrated the CI from laminas flow in all components and libraries [laminas-continuous-integration ](https://github.com/marketplace/actions/laminas-continuous-integration)
 - all above are still work in progress, in beta stage
