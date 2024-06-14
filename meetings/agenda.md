@@ -26,3 +26,15 @@ Here are a handful of ideas that can hopefully be used as talking points at the 
 - survey existing members for nominations of new maintainers
 
 As someone who uses Laminas/Mezzio in client work, I have a vested interest in seeing the components continue to evolve and improve - and I believe the projects are solid and viable alternatives to the other major frameworks. It would be a shame to witness the slow death of the projects…
+
+### Licensing
+
+The current state of open source is such that developers provide their time and expertise contributing to projects for no financial reward, whilst corporations reap the benefits by selling software and services built from those components for profit.
+
+One way to redress this imbalance is via licensing - deny profit making enterprise access to software unless they pay for it.
+
+- Is a discussion around re-licensing Laminas and Mezzio components worth having?
+- Are there any existing licenses that could be adopted to improve outside investment?
+- Could we use Laminas funds to pay for decent legal advice?
+- Is potential non-use/reduction in use a concern?
+- Would re-licensing be compatible with any constraints placed on us by the Linux Foundation?
