@@ -38,3 +38,36 @@ One way to redress this imbalance is via licensing - deny profit making enterpri
 - Could we use Laminas funds to pay for decent legal advice?
 - Is potential non-use/reduction in use a concern?
 - Would re-licensing be compatible with any constraints placed on us by the Linux Foundation?
+
+### Extract Laminas Translator Interface to a new component
+
+Introduce a new package `laminas-translator` that contains only the `LaminasTranslator` interface. Release 2 versions, v1.0 without native types and v2.0 with native types, i.e.
+
+```php
+namespace Laminas\Translator;
+
+interface Translator
+{
+    /**
+     * Translate a message.
+     */
+    public function translate(
+        string $message,
+        string $textDomain = 'default',
+        string|null $locale = null,
+    ): string;
+
+    /**
+     * Translate a plural message.
+     */
+    public function translatePlural(
+        string $singular,
+        string $plural,
+        int $number,
+        string $textDomain = 'default',
+        string|null $locale = null
+    ): string;
+}
+```
+
+Implement this interface in `laminas-i18n` so that all other components that consume a translator can rely on the interface without depending on `laminas-i18n` - then, hopefully, we'll have an easier time upgrading to service manager v4 in those components.
