@@ -43,6 +43,8 @@ One way to redress this imbalance is via licensing - deny profit making enterpri
 
 Introduce a new package `laminas-translator` that contains only the `LaminasTranslator` interface. Release 2 versions, v1.0 without native types and v2.0 with native types, i.e.
 
+I've created a repository containing the proposed interface here: https://github.com/gsteel/laminas-translator that is hopefully ready to release.
+
 ```php
 namespace Laminas\Translator;
 
