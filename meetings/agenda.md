@@ -1,6 +1,6 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2024-07-03
+- Date: 2024-07-01
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
@@ -42,6 +42,8 @@ One way to redress this imbalance is via licensing - deny profit making enterpri
 ### Extract Laminas Translator Interface to a new component
 
 Introduce a new package `laminas-translator` that contains only the `LaminasTranslator` interface. Release 2 versions, v1.0 without native types and v2.0 with native types, i.e.
+
+I've created a repository containing the proposed interface here: https://github.com/gsteel/laminas-translator that is hopefully ready to release.
 
 ```php
 namespace Laminas\Translator;
