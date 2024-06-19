@@ -7,6 +7,10 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
+### Vote on the nomination of Julian Somesan as TSC member
+
+@weierophinney has nominated [Julian Somesan (@arhimede)](https://github.com/arhimede) as the newest member of the TSC. The [RFC](https://github.com/laminas/technical-steering-committee/issues/177) has attracted positive support and as per [processes](https://github.com/laminas/technical-steering-committee/blob/main/processes/VOTING.md), a vote must be conducted to approve his appointment.
+
 ### Laminas Bus Factor
 
 Recently, 3 of the most skilled, knowledgeable and senior members of the TSC have signalled their intent to either scale back or withdraw from opensource. Without these TSC members, Laminas and Mezzio would be left with vanishingly small pool of maintainers, many of which have little of their own personal time to work on the projects.
