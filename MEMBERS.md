@@ -18,4 +18,5 @@ Last updated: 2020-06-01
 - George Steel ([@gsteel](https://github.com/gsteel))
 - James Titcumb ([@asgrim](https://github.com/asgrim))
 - Witold Wasiczko ([@snapshotpl](https://github.com/snapshotpl))
+- Julian Somesan ([@arhimede](https://github.com/arhimede))
 - Matthew Weier O'Phinney ([@weierophinney](https://github.com/weierophinney))
