@@ -1,6 +1,6 @@
 # Technical Steering Committee Members
 
-Last updated: 2020-06-01
+Last updated: 2024-07-01
 
 - Rob Allen ([@akrabat](https://github.com/akrabat))
 - Maximilian Bösing ([@boesing](https://github.com/boesing))
@@ -15,6 +15,7 @@ Last updated: 2020-06-01
 - Aleksei Khudiakov ([@Xerkus](https://github.com/Xerkus))
 - Marco Pivetta ([@Ocramius](https://github.com/Ocramius))
 - Matthew Setter ([settermjd](https://github.com/settermjd))
+- Julian Somesan ([@arhimede](https://github.com/arhimede))
 - George Steel ([@gsteel](https://github.com/gsteel))
 - James Titcumb ([@asgrim](https://github.com/asgrim))
 - Witold Wasiczko ([@snapshotpl](https://github.com/snapshotpl))
