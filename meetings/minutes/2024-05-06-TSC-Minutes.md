@@ -1,4 +1,4 @@
-# Minutes from the 2024-03-04 Laminas Technical Steering Committee Meeting
+# Minutes from the 2024-05-06 Laminas Technical Steering Committee Meeting
 
 - When: 2024-05-06 at 19:00 UTC, until 19:53 UTC
 - Where: Laminas Slack #tsc-meeting channel
