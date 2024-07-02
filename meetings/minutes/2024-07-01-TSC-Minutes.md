@@ -1,6 +1,6 @@
 # Minutes from the 2024-07-01 Laminas Technical Steering Committee Meeting
 
-- When: 2024-07-01 at 19:00 UTC, until HH:MM UTC
+- When: 2024-07-01 at 19:00 UTC, until 20:56 UTC
 - Where: Laminas Slack #tsc-meeting channel
 - Attending:
   - Abdul Malik Ikhsan
