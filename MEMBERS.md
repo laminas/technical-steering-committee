@@ -8,7 +8,6 @@ Last updated: 2024-07-01
 - Michał Bundyra ([@michalbundyra](https://github.com/michalbundyra))
 - Luís Cobucci ([@lcobucci](https://github.com/lcobucci))
 - Geert Eltink ([@geerteltink](https://github.com/geerteltink))
-- Andreas Heigl ([@heiglandreas](https://github.com/heiglandreas))
 - Gary Hockin ([@geeh](https://github.com/geeh))
 - Gary Lockett ([@internalsystemerror](https://github.com/internalsystemerror))
 - Abdul Malik Ikhsan ([@samsonasik](https://github.com/samsonasik))
