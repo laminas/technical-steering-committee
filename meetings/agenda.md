@@ -28,5 +28,3 @@ Similar to the above, deleting _(not closing 😂)_ old patch milestones. Accept
 Myself _([@gsteel](https://github.com/gsteel))_ and Frank _([@froschdesign](https://github.com/froschdesign))_ have done a lot of work to [`laminas-validator`](https://github.com/laminas/laminas-validator/milestone/5?closed=1) and it is very nearly ready for a v3 release.
 
 Is there anything the TSC wants to see included/changed before we hit the release button?
-
-Feedback would also be appreciated on [this RFC](https://github.com/laminas/laminas-validator/issues/336) prior to release.
