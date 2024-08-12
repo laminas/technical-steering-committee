@@ -1,17 +1,38 @@
 # Laminas Project Maintainers
 
-We aim to have 2+ maintainers per repository.
-Maintainers have GitHub maintainer rights to the repository(ies) they maintain, which means the ability to push code to the repository, manage issues and pull requests, and manipulate selected repository settings.
+Maintainers are trusted contributors who have GitHub's `maintainer` rights to one or more repositories under our GitHub organizations.
 
-To become a maintainer, you must first have another maintainer or a TSC member nominate you to the TSC.
-Nominations are done by submitting an issue to this repository with a title prefix of `[NOMINATION][MAINTAINER]` (or select the "Maintainer Nomination" issue type when creating an issue on this repository).
-Maintainers are approved by a majority vote of the TSC, which will be held no later than 1 week following the nomination.
+Beyond driving fixes/improvements, we expect maintainers to:
+
+- Ensure project continuity, quality, and consistency
+- Review and merge relevant code modifications
+- Triage issues
+- Release new versions
+- Participate in technical discussions and decision-making
+
+We aim to have 2+ maintainers per repository.
+
+## Current maintainers
 
 Current maintainers are found on the Teams page of each organization, on a team matching the repository name:
 
 - [Laminas organization teams](https://github.com/orgs/laminas/teams)
 - [Laminas API Tools organization teams](https://github.com/orgs/laminas-api-tools/teams)
 - [Mezzio organization teams](https://github.com/orgs/mezzio/teams)
+
+## Becoming a Maintainer
+
+### Requirements
+
+- Consistent high-quality contributions (code changes, reviews, discussions, etc) over time
+- Demonstrated understanding of project goals and coding standards
+- Active participation in discussions and issue resolution
+
+### Process
+
+To become a maintainer, you must first have another maintainer or a TSC member nominate you to the TSC.
+Nominations are done by submitting an issue to this repository with a title prefix of `[NOMINATION][MAINTAINER]` (or select the "Maintainer Nomination" issue type when creating an issue on this repository).
+Maintainers are approved by a majority vote of the TSC, which will be held no later than 1 week following the nomination.
 
 ## Maintainers Guide
 
