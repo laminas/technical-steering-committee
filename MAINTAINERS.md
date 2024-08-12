@@ -185,7 +185,7 @@ Examples of scenarios where notes should be added:
 
 Releases are automatically performed by closing a milestone.
 **DO NOT** close the milestone without first closing all related issues and pull requests.
-The [automatic-releases workflow](https://github.com/laminas/automatic-releases) will fail in that scenario, and you will need to re-opend and re-close the milestone in order to create the release.
+The [automatic-releases workflow](https://github.com/laminas/automatic-releases) will fail in that scenario, and you will need to re-open and re-close the milestone in order to create the release.
 
 The automatic-releases workflow:
 
