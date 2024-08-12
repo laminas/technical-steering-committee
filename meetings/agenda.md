@@ -28,3 +28,9 @@ Similar to the above, deleting _(not closing 😂)_ old patch milestones. Accept
 Myself _([@gsteel](https://github.com/gsteel))_ and Frank _([@froschdesign](https://github.com/froschdesign))_ have done a lot of work to [`laminas-validator`](https://github.com/laminas/laminas-validator/milestone/5?closed=1) and it is very nearly ready for a v3 release.
 
 Is there anything the TSC wants to see included/changed before we hit the release button?
+
+### Proposal for new Maintainers
+
+[@arhimede](https://github.com/arhimede) is proposing as maintainers the below:
+ - [Claudiu Pintiuta](https://github.com/laminas/technical-steering-committee/issues/190)
+ - [Alexis Karajos](https://github.com/alexmerlin) for other packages where help is needed [Issue with proposal](https://github.com/laminas/technical-steering-committee/issues/135)
