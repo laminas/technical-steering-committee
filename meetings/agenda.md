@@ -59,9 +59,6 @@ The end result will be like below:
 
 [Mannheim 2024 What is Laminas Project](https://show.dotkernel.org/presentations/what-is-laminas-project/mannheim-2024/)
    
-   
- 
- 
+### Proposal to have a separate committee for marketing and outreach
 
-   
-   
+In [the marketing-and-branding channel](https://laminas.slack.com/archives/C014W19NPV3), there have been discussions, recently, about how to help build awareness of the Laminas project, as well how we should approach marketing, branding, and outreach efforts. A proposal was put forward to have a committee separate to — yet which still overlaps and is answerable to — the TSC, which is directly responsible for these activities. This would allow those activities to happen in tandem to technical development of the project, while allowing those members of the TSC who aren't interested in these kinds of activities not to have to be involved with them.
