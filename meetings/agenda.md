@@ -49,3 +49,10 @@ Proposal to archive and abandon a number of un-maintained libs in `security-only
 - [laminas-zendframework-bridge](https://github.com/laminas/laminas-zendframework-bridge)
 
 Additionally, to audit all libs that are marked as discontinued and ensure they are abandoned in packagist and archived on GitHub.
+
+### New major version of laminas-di (by @tuxrampage)
+
+The `laminas-di` component should receive a new major version to improve its
+future maintainability and to support new PHP features.
+
+The details for this process are outlined (and discussed) in the following RFC: https://github.com/laminas/laminas-di/issues/95
