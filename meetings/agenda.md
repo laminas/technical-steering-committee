@@ -23,3 +23,18 @@ The main changes are `final` everywhere and dropped support for callable factori
 Compat is looking fine with [Fast Route](https://github.com/mezzio/mezzio-fastroute/pull/40) and [Laminas Router](https://github.com/mezzio/mezzio-laminasrouter/pull/35).
 
 Does anyone have any last-minute changes they want to see included or any problems that need highlighting?
+
+### Stale issue/PR cleanup proposal (by @alexmerlin)
+
+We should close PRs that fulfill all of these criteria:
+
+* abandoned (no activity within 1-2 years, also author inactive on GitHub)
+* targeting old branches (several versions behind the current/default branch)
+* not linked with or created based on an existing issue (because in this case it could be a feature that is needed by someone, the PR might just need to target a newer branch)
+
+Examples:
+
+* https://github.com/mezzio/mezzio-csrf/pull/14
+* https://github.com/laminas/laminas-i18n-resources/pull/8
+
+@alexmerlin volunteers to run through the open Laminas/Mezzio issues/PRs and close the ones that match a set of criteria agreed upon.
