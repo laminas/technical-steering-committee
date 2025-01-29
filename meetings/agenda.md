@@ -20,3 +20,8 @@ Please file pull requests to add, or discuss items to add, to the agenda.
     
      https://tuta.com/blog/tutanota-for-open-source-teams
     
+### Dropping Support for PHP 8.1
+
+@gsteel wants to, as a general rule, drop support for PHP 8.1 so that as we upgrade to Psalm v6, we can also Upgrade to PHPUnit 11 at the same time. This will help keep our dev dependencies healthy and improve quality over time.
+
+Any objections?
