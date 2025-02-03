@@ -25,3 +25,8 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 @gsteel wants to, as a general rule, drop support for PHP 8.1 so that as we upgrade to Psalm v6, we can also Upgrade to PHPUnit 11 at the same time. This will help keep our dev dependencies healthy and improve quality over time.
 
 Any objections?
+
+### New design and layout
+
+    Based on the current visual identity , @arhimede is proposing a new design and improved layout. 
+    https://github.com/laminas/getlaminas.org/issues/242
