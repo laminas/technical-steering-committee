@@ -14,7 +14,7 @@
   - Maximilian Bösing
   - Michał Bundyra
 
-Quroum WAS met (9 out of 15 members were present).
+Quorum WAS met (9 out of 15 members were present).
 
 ## Agenda
 
@@ -58,7 +58,7 @@ Aleksei agreed at that point, considering we have suggestions for replacements.
 We will abandon laminas-mail and laminas-mime.
 We will add recommendations to the three other projects in the README, and link to symfony/mailer for the "abandoned" property of the project.
 
-Matthew will reach out to the Magento open source project and let them know, as they are one of the consumers of these packages.
+Matthew will reach out to the Magento open source project and let them know, as they are one of the consumers of these packages. Done: https://github.com/magento/magento2/issues/39170
 
 ### BC Checks in the CI pipeline
 
