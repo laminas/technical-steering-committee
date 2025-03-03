@@ -25,7 +25,9 @@ PR related to opengraph: https://github.com/laminas/getlaminas.org/pull/259
 ### New design
 
 The PR is here: https://github.com/laminas/getlaminas.org/pull/260
-We will have a future page for **Mezzio 101** tutorials and materials
+The preview is here: https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/
+It is still work in progress, but we can discuss about the general design look and feel. 
+We will have a future page for **Mezzio 101** tutorials and materials.
 
 ### Repo for tutorials
 
