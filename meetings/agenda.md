@@ -29,11 +29,6 @@ The preview is here: https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.sit
 It is still work in progress, but we can discuss about the general design look and feel. 
 We will have a future page for **Mezzio 101** tutorials and materials.
 
-### Repo for tutorials
-
-The series of **Mezzio 101** related articles in the blog may need some code repositories with tutorials.
-Can we list them under Laminas or Mezzio organisation ?
-
 ### Change communication and focus on Mezzio and middlewares
 
 Right now, the principle and current communication is aimed at **Laminas Project and sub-projects**.
