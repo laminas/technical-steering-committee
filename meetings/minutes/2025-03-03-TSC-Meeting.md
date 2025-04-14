@@ -79,6 +79,8 @@ Aleksei suggests we stop funneling people to the MVC project and docs, and maybe
 
 While there is general consensus, Julian will initiate an async vote to validate.
 
+> The async vote passed with 13 votes, so the decision is made to (a) emphasize Mezzio more prominently, and (b) de-emphasize the MVC project. 
+
 ### Criteria for including in Ecosystem page
 
 Below is listed a more detailed description of the Ecosystem page.
