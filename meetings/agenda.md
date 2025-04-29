@@ -22,3 +22,15 @@ Please file pull requests to add, or discuss items to add, to the agenda.
   - Parameter and return types throughout
 
 The [migration guide](https://github.com/laminas/laminas-filter/blob/3.0.x/docs/book/v3/migration/v2-to-v3.md) is complete and serves as a good overview of all the changes
+
+### Release version 1.0 of `laminas-navigation-view`
+
+@gsteel proposes to release v1 of [`laminas-navigation-view`](https://github.com/laminas/laminas-navigation-view)
+
+This is a new package that contains view helpers related to `laminas-navigation`. In order for `laminas-view` to reach a v3 release, a number of dependencies need to be de-coupled so that view can be upgraded to support service manager v4.
+
+V1 is a straight copy of the files in `laminas-view` except the namespace change and marking classes as final where possible.
+
+The plan is to work on and release a v2, _after_ `laminas-view@3.0` has been released which will make the necessary changes for `laminas-navigation-view` to support `service-manager@4.x` and `laminas-view@3.x`
+
+It is likely we'll need to do something similar for `laminas-paginator`…
