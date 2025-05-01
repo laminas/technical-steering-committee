@@ -35,6 +35,23 @@ The plan is to work on and release a v2, _after_ `laminas-view@3.0` has been rel
 
 It is likely we'll need to do something similar for `laminas-paginator`…
 
+### General Discussion on Soft-Dependency Satellite Packages
+
+I currently have the problem of a `laminas-paginator` soft-dependency in [`laminas-view`#279](https://github.com/laminas/laminas-view/issues/279)
+
+Can we reach a consensus on how to refactor packages to remove soft-dependencies, or, at least resolve the issues specifically for `laminas-view` which are now limited to:
+
+- `laminas-filter` (Which I would like to drop, and replace with a generic callable for view filtering)
+- `laminas-authentication` Where should the `Identity` view helper go? To the auth package? a separate pkg?, or keep the soft dep?
+- `laminas-paginator` Same question… Keep the soft dep and require SMv4 support in paginator first, move to a new pkg, move to paginator (thereby introducing a dependency on view)
+
+If we decide that satellite packages should be created, then we should probably have a vote on creating new packages for
+
+- `laminas-paginator-view`
+- `laminas-authentication-view`
+
+Generally, cyclic _soft_ dependencies are everywhere, traversing to `laminas-authentication` from here brings up soft-deps on `validator` amongst several others.
+
 ### The Future of MVC
 
 Modernising, refactoring and adding support for service manager v4 in the various libs is a lot of work.
