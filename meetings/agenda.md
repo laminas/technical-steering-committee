@@ -34,3 +34,9 @@ V1 is a straight copy of the files in `laminas-view` except the namespace change
 The plan is to work on and release a v2, _after_ `laminas-view@3.0` has been released which will make the necessary changes for `laminas-navigation-view` to support `service-manager@4.x` and `laminas-view@3.x`
 
 It is likely we'll need to do something similar for `laminas-paginator`…
+
+### The Future of MVC
+
+Modernising, refactoring and adding support for service manager v4 in the various libs is a lot of work.
+Affordances for the MVC framework take additional effort.
+Given the lack of maintenance activity on the MVC side of things, is it time to consider the long-term future of MVC?
