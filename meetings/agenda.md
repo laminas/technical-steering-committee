@@ -57,3 +57,9 @@ Generally, cyclic _soft_ dependencies are everywhere, traversing to `laminas-aut
 Modernising, refactoring and adding support for service manager v4 in the various libs is a lot of work.
 Affordances for the MVC framework take additional effort.
 Given the lack of maintenance activity on the MVC side of things, is it time to consider the long-term future of MVC?
+
+### BSD-3 license clarifications
+
+Does Apidemia as a company require written permission to use 'Laminas', 'Mezzio' to endorse and promote its products from the Dotkernel 
+(project and subprojects) that use Laminas/Mezzio components with BSD-3 license?
+
