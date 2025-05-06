@@ -12,7 +12,7 @@
     - Matthew Setter
     - Rob Allen
 
-Quorum WAS met (8 out of 16 members were present).
+Quorum was met (8 out of 16 members were present).
 
 ## Agenda
 
