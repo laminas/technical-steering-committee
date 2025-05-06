@@ -27,7 +27,7 @@ The poll passed on the following day.
 
 Again, there was little to discuss, but there was mention of splitting large Laminas packages into smaller, more easily managed dependencies.
 George Steel worked on refactoring [laminas-navigation-view](https://github.com/laminas/laminas-navigation-view) and getting it ready for the 1.0 release.
-Aleksei mentioned agreed that the decoupling process is desirable.
+Aleksei agreed that the decoupling process is desirable.
 
 The poll from the previous item in the agenda also covers this topic.
 
