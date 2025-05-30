@@ -32,3 +32,12 @@ But I would not open the discussions on all repositories.
 So the question is: do we want to have a single place for discussions, and if yes, which one?
 On a specific repository or on for the whole organization?
 Or there are other options/ideas?
+
+### Push live the getlaminas.org new design
+
+[The preview is here](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/)
+
+There are some details to fix here and there, and maybe new pages to be created or update, but we may push it live as is now.
+
+We can fix details later, it is still work in progress, but at least we can show progress, and reflect the changes in focus of the project.
+
