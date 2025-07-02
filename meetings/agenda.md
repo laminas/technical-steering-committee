@@ -42,3 +42,9 @@ The following items need to be addressed:
 - Create a complete new guide which uses the new skeleton application and the new command line tooling
 
 New helpers may be required to issue flash messages, enable access to the authentication identity or something similar.
+
+### Mark MVC Related Libraries as Security-Only in line with `laminas-mvc`
+
+According to the [maintenance overview](https://getlaminas.org/packages-maintenance-status/), MVC has already been marked as `security-only`, but the other MVC specific libs are still in active maintenance.
+
+George proposes _(And volunteers)_ to update the attributes/labels on these repos to security only mode, i.e. `mvc-form`, `mvc-plugin-prg` etc…
