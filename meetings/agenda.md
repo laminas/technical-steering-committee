@@ -35,3 +35,11 @@ New helpers may be required to issue flash messages, enable access to the authen
 According to the [maintenance overview](https://getlaminas.org/packages-maintenance-status/), MVC has already been marked as `security-only`, but the other MVC specific libs are still in active maintenance.
 
 George proposes _(And volunteers)_ to update the attributes/labels on these repos to security only mode, i.e. `mvc-form`, `mvc-plugin-prg` etc…
+
+### Discussion related to Laminas Ecosystem 
+
+Preview is here [Laminas Ecosystem](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/ecosystem/)
+- What if we remove from **Usage** drop-down the MVC, and keep only middleware? Or remove that drop-down completely ?
+- The design of this page still needs some improvements. @froschdesign 
+- In the corresponding [RFC](https://github.com/laminas/getlaminas.org/pull/226)  there are various opinions, not sure which direction to follow 
+
