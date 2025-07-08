@@ -1,6 +1,6 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2025-07-07
+- Date: 2025-08-04
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
@@ -36,10 +36,30 @@ According to the [maintenance overview](https://getlaminas.org/packages-maintena
 
 George proposes _(And volunteers)_ to update the attributes/labels on these repos to security only mode, i.e. `mvc-form`, `mvc-plugin-prg` etc…
 
+The libs proposed are the following:
+
+- laminas-developer-tools
+- laminas-mvc-form
+- laminas-mvc-i18n
+- laminas-mvc-middleware
+- laminas-mvc-plugin-fileprg
+- laminas-mvc-plugin-flashmessenger
+- laminas-mvc-plugin-identity
+- laminas-mvc-plugin-prg
+- laminas-mvc-plugins
+- laminas-mvc-view (un-released)
+- laminas-test
+- laminas-mvc-skeleton
+- laminas-modulemanager
+- laminas-config-aggregator-modulemanager
+- laminas-skeleton-installer
+- laminas-composer-autoloading
+
+The un-released `laminas-mvc-view` should likely be abandoned and archived. No releases have been made, and it has not been published on Packagist.
+
 ### Discussion related to Laminas Ecosystem 
 
 Preview is here [Laminas Ecosystem](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/ecosystem/)
 - What if we remove from **Usage** drop-down the MVC, and keep only middleware? Or remove that drop-down completely ?
 - The design of this page still needs some improvements. @froschdesign 
 - In the corresponding [RFC](https://github.com/laminas/getlaminas.org/pull/226)  there are various opinions, not sure which direction to follow 
-
