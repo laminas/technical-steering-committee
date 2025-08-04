@@ -57,6 +57,12 @@ The libs proposed are the following:
 
 The un-released `laminas-mvc-view` should likely be abandoned and archived. No releases have been made, and it has not been published on Packagist.
 
+### Mezzio charting a new visual direction
+
+Related to the [RFC](https://github.com/laminas/getlaminas.org/issues/298).
+The PDF presentation was shared in the Slack channel.
+Let's talk about which of the 3 presented logos we like more.
+
 ### Going live with Laminas Integrations page
 
 - [RFC ](https://github.com/laminas/getlaminas.org/pull/226)
