@@ -63,3 +63,11 @@ Preview is here [Laminas Ecosystem](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2
 - What if we remove from **Usage** drop-down the MVC, and keep only middleware? Or remove that drop-down completely ?
 - The design of this page still needs some improvements. @froschdesign 
 - In the corresponding [RFC](https://github.com/laminas/getlaminas.org/pull/226)  there are various opinions, not sure which direction to follow 
+
+### Release `laminas-view` v3.0.0
+
+Code changes for Laminas View are complete except some miscellaneous clean up required in the View Model interface and implementation, and, work on documentation. If possible, a vote on its release based on the current source would be desirable.
+
+Once the remaining work is complete, I'd like to release ASAP so that we can start working on other components that depend on view such as i18n.
+
+[v3.0.0 Milestone](https://github.com/laminas/laminas-view/milestone/1)
