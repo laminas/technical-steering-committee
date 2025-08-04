@@ -57,12 +57,11 @@ The libs proposed are the following:
 
 The un-released `laminas-mvc-view` should likely be abandoned and archived. No releases have been made, and it has not been published on Packagist.
 
-### Discussion related to Laminas Ecosystem 
+### Going live with Laminas Integrations page
 
-Preview is here [Laminas Ecosystem](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/ecosystem/)
-- What if we remove from **Usage** drop-down the MVC, and keep only middleware? Or remove that drop-down completely ?
-- The design of this page still needs some improvements. @froschdesign 
-- In the corresponding [RFC](https://github.com/laminas/getlaminas.org/pull/226)  there are various opinions, not sure which direction to follow 
+- [RFC ](https://github.com/laminas/getlaminas.org/pull/226)
+- Preview is here [Laminas Integration](https://preview-1-hy2vwsq-2ja7ciew2nbkm.us-2.platformsh.site/)
+- [Instruction about how to propose a package](https://github.com/laminas/getlaminas.org/blob/preview-1/ADD_INTEGRATION.md)
 
 ### Release `laminas-view` v3.0.0
 
