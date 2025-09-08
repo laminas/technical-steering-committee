@@ -23,10 +23,10 @@ We may want to avoid the situations where:
 
 So it may be a good idea to create a private repo where we can store login and source files ?
 
-### New header for Mastodon and Linkedin 
+### New header for Mastodon and LinkedIn
 
 [See the issue](https://github.com/laminas/getlaminas.org/issues/323)
 
-### New official logos 
+### New official logos
 
 [See the issue](https://github.com/laminas/getlaminas.org/issues/324)
