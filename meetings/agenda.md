@@ -22,3 +22,11 @@ We may want to avoid the situations where:
 - and so on
 
 So it may be a good idea to create a private repo where we can store login and source files ?
+
+### New header for Mastodon and Linkedin 
+
+[See the issue](https://github.com/laminas/getlaminas.org/issues/323)
+
+### New official logos 
+
+[See the issue](https://github.com/laminas/getlaminas.org/issues/324)
