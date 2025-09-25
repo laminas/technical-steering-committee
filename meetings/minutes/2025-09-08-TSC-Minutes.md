@@ -51,11 +51,11 @@ Matthew considered that a private repo would be free, but ultimately, not needed
 The various logins should be shared between the maintainers to ensure redundancy.
 The members opted for [1Password](https://1password.com/) and started messaging the people who set up the various social accounts.
 
-They also decided that a private repository is not needed, since it's ok to keep the logo souce files public.
+They also decided that a private repository is not needed, since it's ok to keep the logo source files public.
 
 ### New header for Mastodon and LinkedIn
 
-Should references to Zend Framework be removed from the getlaminas.com tagline?
+Should references to Zend Framework be removed from the getlaminas.org tagline?
 
 #### Discussion
 
