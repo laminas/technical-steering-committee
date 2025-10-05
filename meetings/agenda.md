@@ -26,3 +26,11 @@ Now that 8.5 is available in CI _(Currently RC 1)_ it is feasible to start testi
 8.1 will be [EOL at the end of 2025](https://www.php.net/supported-versions.php).
 
 Should we make it policy drop 8.1 support at the same time as adding 8.5 support, even though there are a couple of months of security support left? Or, should we retain 8.1 support until it subjectively or objectively starts causing a maintenance burden?
+
+### Attending the Dutch PHP Conference
+
+Does it worth to sponsor a small booth space at [The Dutch PHP conference](https://phpconference.nl/) ?
+
+It is one of the few major European PHP general conferences (not Laravel or Symfony).
+
+If yes, how we can find the funds for a [Silver option](https://webdevcon.nl/sponsors/packages/#showTable), to have a small booth there ?
