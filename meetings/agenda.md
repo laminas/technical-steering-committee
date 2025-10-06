@@ -34,3 +34,27 @@ Does it worth to sponsor a small booth space at [The Dutch PHP conference](https
 It is one of the few major European PHP general conferences (not Laravel or Symfony).
 
 If yes, how we can find the funds for a [Silver option](https://webdevcon.nl/sponsors/packages/#showTable), to have a small booth there ?
+
+### Adopt PER Coding Style
+
+PSR-12 coding standard was introduced 6 years ago and does not cover new PHP
+features released since. Our own coding standard is an extension to PSR-12.
+Our own rules narrow down PSR-12 and also address some of the new feautures.
+
+PER Coding Style, currently at the version 3.0, is an *evolving* standard
+that keeps up with the PHP releases and aims to remain compatible with PSR-12 when
+practical but does not guarantee it.
+
+In terms of adoption as of now we would gain new rules addressing what was not
+covered by our standard as well as rules that simply make our additions
+redundant.
+
+Some of the topics covered by the new rules are compound types, short
+closures, attributes, enums, old and new modifier keywords including assymetric visibility
+for properties, constructor property promotion, property hooks. multi-line operators placement.
+
+Preliminary changes can be viewed as a diff here https://github.com/laminas/laminas-coding-standard/pull/93/files?diff=split
+
+With the decision to adopt PER Coding Style our coding standard would switch to and
+track latest version of the evolving recommendation. Should our extended rules
+conflict with the newer versions, PER CS would win.
