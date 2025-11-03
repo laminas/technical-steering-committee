@@ -6,3 +6,7 @@
 Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
+
+### Immutable Releases
+
+Should we start using immutable releases, as defined by GitHub?
