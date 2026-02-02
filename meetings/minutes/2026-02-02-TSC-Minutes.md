@@ -12,7 +12,7 @@
     - Rob Allen
     - Frank Brückner
 
-Quorum WAS NOT met (7 out of 16 members were present).
+Quorum WAS NOT met (8 out of 16 members were present).
 
 ## Agenda
 
