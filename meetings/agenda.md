@@ -24,3 +24,17 @@ Things we need to fly over:
 * [ ] development will be done on https://github.com/Roave/mezzio-valinor first, to validate the design assumptions
 * [ ] are we OK with potentially moving such a component directly into Mezzio?
 * [ ] are there long-term maintainability and security concerns? 
+
+### When will laminas-mvc be abandoned?
+
+The original statement is no longer correct:
+
+> Laminas MVC will be marked as security-only until PHP 8.5 is released (This is likely to be around November 2025), and abandoned in Packagist after this date.
+
+So we need to find a new date and make sure there is enough time for the migration.
+Especially since we haven't created any tools or instructions to help with this yet.
+
+Reference:
+
+- https://getlaminas.org/blog/2025-06-06-laminas-mvc-is-retiring.html
+- https://discourse.laminas.dev/t/laminas-mvc-future/3929/18
