@@ -90,7 +90,7 @@ Several other members agreed with this view, though they were also eager to help
 
 #### Decisions
 
-James will draft an announcement blog post to provide more information and a new date related to laminas-mvc's maintenance status.
-Julian and any volunteers will work on migration guides.
-Frank will update README.md files in the impacted Laminas packages.
+- James will draft an announcement blog post to provide more information and a new date related to laminas-mvc's maintenance status.
+- Julian and any volunteers will work on migration guides.
+- Frank will update README.md files in the impacted Laminas packages.
 
