@@ -42,15 +42,15 @@ final readonly class AddToCart
     }
 }
 
-        $app->post('/cart/{sku}', function (ServerRequestInterface $request) use ($mapper): ResponseInterface {
-            $input = $mapper->map(AddToCart::class, $request);
+$app->post('/cart/{sku}', function (ServerRequestInterface $request) use ($mapper): ResponseInterface {
+    $input = $mapper->map(AddToCart::class, $request);
 
-            return new JsonResponse([
-                'reached_endpoint' => true,
-                'sku'              => $input->sku,
-                'quantity'         => $input->quantity,
-            ]);
-        });
+    return new JsonResponse([
+        'reached_endpoint' => true,
+        'sku'              => $input->sku,
+        'quantity'         => $input->quantity,
+    ]);
+});
 ```
 
 Marco intends to make it work as a completely independent component at first, endorsed by Laminas.
