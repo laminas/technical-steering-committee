@@ -78,5 +78,3 @@ The benefits of reducing the scope would be:
 - Faster release of SM4 support
 - Less effort to upgrade live projects
 - Maintaining the public interest in the Laminas ecosystem
-
-
