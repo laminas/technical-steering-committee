@@ -41,19 +41,26 @@ have voted, whichever comes first.
 The following list is non-exhaustive.
 
 - Approval of new Maintainers (only requires a simple majority approval).
-
 - Approval of a new TSC member.
-
 - Selection of Project Lead.
-
 - Acceptance of a new repository to the Project or a subproject.
-
 - Acceptance of a new subproject.
-
 - Abandonment of a repository.
-
 - Abandonment of a subproject.
-
 - Approval of a cross-repository or cross-project initiative.
-
 - Expulsion of any Maintainer, TSC member, or the Project Lead.
+- Releasing a new major version of a subproject _may_ require a vote. This is detailed in ["Major Releases"](#major-releases)
+
+## Major Releases
+
+In order to publish a backwards incompatible major release, it is _required_ that the maintainer who intends to make the release will send a notification to the TSC members "Private Channel" _(currently this is hosted in Slack)_.
+
+This notification should include the repository name and the intended release date, which must be at a minimum of 2 weeks after the date of notification.
+
+The purpose of this process is to ensure that TSC members have the time to voice any concerns, address any outstanding quality issues or introduction of additional BC breaks _(for example)_.
+
+This 'cooling off' period also allows TSC members to request the release be subject to a vote in an upcoming TSC meeting. This may be necessary when there are significant architectural changes that warrant greater attention.
+
+If a member wishes to escalate the release decision to a vote, it is expected that this member will add the item to the [meeting agenda](../meetings/agenda.md) and communicate this with the member(s) responsible for the release.
+
+In normal circumstances, where there are no objections within the 2-week window, the member responsible for the release may feel free to publish the major revision on or after the expected date.
