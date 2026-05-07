@@ -53,11 +53,11 @@ The following list is non-exhaustive.
 
 ## Major Releases
 
-In order to publish a backwards incompatible major release, it is _required_ that the maintainer who intends to make the release will send a notification to the TSC members "Private Channel" _(currently this is hosted in Slack)_.
+In order to publish a backwards incompatible major release, it is _required_ that the maintainer who intends to make the release will send a notification to the public "Contributors" channel in Slack.
 
 This notification should include the repository name and the intended release date, which must be at a minimum of 2 weeks after the date of notification.
 
-The purpose of this process is to ensure that TSC members have the time to voice any concerns, address any outstanding quality issues or introduction of additional BC breaks _(for example)_.
+The purpose of this process is to ensure that TSC members and any other interested parties have the time to voice any concerns, address any outstanding quality issues or introduction of additional BC breaks _(for example)_.
 
 This 'cooling off' period also allows TSC members to request the release be subject to a vote in an upcoming TSC meeting. This may be necessary when there are significant architectural changes that warrant greater attention.
 
