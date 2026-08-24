@@ -7,36 +7,48 @@ Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
-### Consider Adopting Mago in place of Psalm and PHP_CodeSniffer
+### Consider StructArmed for Architecture Guarding
 
-I've sent in a patch to `laminas-validator` ([#476](https://github.com/laminas/laminas-validator/pull/476)) to illustrate some of the changes involved.
+I built [StructArmed](https://github.com/boundwize/structarmed), a PHP architecture guard that turns architectural decisions into executable checks.
 
-Discussion points
+It is already used by several PHP frameworks:
 
-- Performance. Mago runs (for any of lint, analyse and format) at sub-second speeds. This is incomparably faster than our current tooling
-- Formatting. Using the default PER-CS standard, there is very little difference to our existing CS rules, the diff was [pretty small for validator](https://github.com/laminas/laminas-validator/pull/476/changes/2d8bb091d7c9b4fe51f82ec0b75d7bac6bb65724), and required just a few minor config tweaks.
-- Mago is very actively developed, it's getting more traction, and tooling support is getting better all the time. Specifically, mago is supported by infection where the current psalm support in infection looks a bit doomed from v7 (un-released) onwards (the Roave SA plugin maintained by Marco is not looking likely to get v7 support).
-- Dependency management. Mago, when installed via composer is dependency free, so no more dependency upgrade difficulties with tooling.
-- Configuration… takes some effort to learn, but does have a well-defined schema. We can also ship mago config as a composer dependency org-wide and use `extends =` to provide default, org-wide configuration.
-- We currently have no support for mago in the CI matrix, we could probably run mago out of the `additional_checks` key for the Laminas CI action instead of adding the runs directly to GHA config.
-- A new major release of Psalm is possibly coming soon. The work required to get Psalm upgrading is not likely to be dissimilar to switching to mago I'd estimate.
-- It's possible that Mago v2 could be a painful upgrade, at least from CI configuration as I believe the lint and analyse tools may be getting merged and there is also talk of introducing levels (as per PHPStan / Psalm)
+| Project          | Configuration                                                                                |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| CakePHP          | https://github.com/cakephp/cakephp/blob/5.x/structarmed.php               |
+| CodeIgniter 4    | https://github.com/codeigniter4/CodeIgniter4/blob/develop/structarmed.php |
+| Spiral Framework | https://github.com/spiral/framework/blob/master/structarmed.php           |
 
-### Allow compatible Rector versions for `laminas-servicemanager-migration`
+I would like us to consider whether StructArmed could also be useful for Laminas and Mezzio.
 
-As I’m now less involved in Rector’s day-to-day development and verification, I may not always be available to review and validate every Rector dependency update for this package.
+As a starting point, I suggest trying it on a small number of core packages:
 
-Because of that, I’m wondering whether we could replace the pinned version in:
+* `mezzio/mezzio`
+* `laminas/laminas-diactoros`
 
-* https://github.com/laminas/laminas-servicemanager-migration
+or another packages if there are better candidate.
 
-with a compatible version constraint:
+Deptrac already covers the core architecture-layer use case well. Comparing to deptrac, the following are capabilities or characteristics of StructArmed that may be useful for Laminas/Mezzio:
 
-```diff
--"rector/rector": "2.5.7"
-+"rector/rector": "^2.5.7"
-```
+| Area                     | StructArmed                                                                                                                                                             |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Configuration            | Native PHP configuration                                                                                                                                                |
+| Getting started          | Ready-made presets, such as PSR-4, with layers, layer patterns, and rulesets added gradually as needed                                                                  |
+| Preset customization     | Registered preset rules can be overridden, replaced, or skipped                                                                                                         |
+| PHPUnit integration      | Can run as a PHPUnit extension                                                                                                                                          |
+| Platform support         | Tested on Windows, macOS, and Linux                                                                                                                                     |
+| Performance              | Optimized parallel analysis with optional caching                                                                                                                       |
+| Extensibility            | Supports custom rules and custom fixers                                                                                                                                 |
+| Automatic fixes          | Custom rules can implement `FixableInterface` and support `--fix`                                                                                                       |
+| Parser/fixer integration | Custom rules and fixers can use `php-parser`, [JsonRecast](https://github.com/boundwize/jsonrecast), or their own implementation                                        |
+| Dependencies             | Small set of direct runtime dependencies: [composer.json](https://github.com/boundwize/structarmed/blob/927f8c16de216ea46089e75a8d47b7cce07ba3b3/composer.json#L31-L34) |
+| Tests                    | 100% test coverage                                                                                                                                                      |
 
-This would allow compatible Rector updates without requiring a separate pull request for every release. We could then remove the related Renovate `rangeStrategy` configuration from `renovate.json`.
+Here performance tested on `Spiral Framework` and `CodeIgniter 4`:
 
-When a future Rector release introduce an incompatible API change, we can address it when needed.
+* **Spiral Framework:** 2,212 files analyzed in **5.52 seconds** on a 2-core GitHub Actions runner: [reference](https://github.com/spiral/framework/actions/runs/30997621072/job/92278432577#step:9:26)
+* **CodeIgniter 4:** with the StructArmed cache restored, analysis completed in **0.07 seconds**: [reference](https://github.com/codeigniter4/CodeIgniter4/actions/runs/30652213832/job/91227964459#step:10:13)
+
+Full documentation is available at:
+
+https://boundwize.github.io/structarmed/
