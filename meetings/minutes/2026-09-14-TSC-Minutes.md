@@ -35,7 +35,7 @@ Abdul will draft a PR to laminas-ci-matrix-action for george to review.
 
 ### Other Items
 
-George mentioned that input-filter still has pending work (blocked partly on docs).
+George mentioned that `input-filter` still has unfinished work implementing stateless validation.
 Serializer v4 amd laminas-i18n v3.0 are to be released.
 The Release-candidate (RC) strategy proposal was discussed, but no firm decision was made.
 
