@@ -40,6 +40,6 @@ Serializer v4 amd laminas-i18n v3.0 are to be released.
 The Release-candidate (RC) strategy proposal was discussed, but no firm decision was made.
 
 Julian proposed creating AI/Claude skills and coding agent tooling, citing JetBrains stats that ~80% of PHP developers use some form of AI.
-George dismissed it at first, though Tyrsson mentioned building an MCP for Mezzio and Rob was in favor of writing LLM skills to help AI agents correctly implement Laminas components.
+George dismissed it at first, though Tyrsson mentioned building an [MCP for Mezzio](https://discourse.laminas.dev/t/ai-agent-skills-for-laminas-and-mezzio-development/4046) and Rob was in favor of writing LLM skills to help AI agents correctly implement Laminas components.
 
 The next TSC meeting was set for **Monday, October 5**.
