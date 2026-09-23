@@ -14,3 +14,11 @@ We should discuss a solution for how we can carry out the update process without
 Would an automated update process – for example, using Rector and other tools or processes – be a viable option, or would it make more sense to put together a team for this?
 
 https://php.watch/versions/8.6/changelog
+
+### Note PHPStorm Providing Licences Somewhere on the Website
+
+Thanks to Julian Somesan for organising, we recently received Jet Brains licences for their all-products pack, certainly to me and possibly Xerkus.
+
+It occurred to me that we should publicly acknowledge this on the website somewhere with a link back to the JetBrains website.
+
+This should make it easier to request renewals and further licences for other team members in the future and at the very least is courteous!  
