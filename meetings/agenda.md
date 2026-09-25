@@ -22,3 +22,20 @@ Thanks to Julian Somesan for organising, we recently received Jet Brains licence
 It occurred to me that we should publicly acknowledge this on the website somewhere with a link back to the JetBrains website.
 
 This should make it easier to request renewals and further licences for other team members in the future and at the very least is courteous!  
+
+### Change Renovate config to *bump* dev deps instead of updating the lock
+
+Can we discuss changing the strategy for our org-wide renovate configs to:
+
+```json
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    // .....
+    "packageRules": [
+        // ....
+        {"matchDepTypes": ["require"], "rangeStrategy": "widen"},
+        {"matchDepTypes": ["require-dev"], "rangeStrategy": "bump"}
+    ]
+    // .....
+}
+```
