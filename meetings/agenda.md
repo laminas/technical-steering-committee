@@ -39,3 +39,11 @@ Can we discuss changing the strategy for our org-wide renovate configs to:
     // .....
 }
 ```
+
+### Article on the Impact of AI Coding Assistants on Frameworks
+
+The article explores the advantages of a minimal, standards-based core like Mezzio, compared to full-stack frameworks.
+AI Coding Assistants generate code just as effectively in both environments, but the bloat in some frameworks can be a significant problem.
+Skeletons like Mezzio are designed to be as small as possible, but also expanded to accommodate the needs of the project.
+
+https://github.com/laminas/getlaminas.org/pull/381
