@@ -1,49 +1,18 @@
 # Next Technical Steering Committee Meeting Agenda
 
-- Date: 2026-10-05
+- Date: 2026-12-07
 - Time: 19:00 UTC
 
 Please file pull requests to add, or discuss items to add, to the agenda.
 
 ## Items to Discuss
 
-### PHP 8.6
+### Move laminas-cache-storage-deprecated-factory to Security-Only Maintenance Mode
 
-PHP 8.6 is the next major release of PHP, scheduled for 19 November 2026.
-We should discuss a solution for how we can carry out the update process without having to take people away from ongoing development work for weeks on end again.
-Would an automated update process – for example, using Rector and other tools or processes – be a viable option, or would it make more sense to put together a team for this?
+This component is declared as a temporary solution:
 
-https://php.watch/versions/8.6/changelog
+> Temporary storage adapter factory for fluent migration to laminas-cache v3 when working with laminas components which depend on laminas-cache
 
-### Note PHPStorm Providing Licences Somewhere on the Website
-
-Thanks to Julian Somesan for organising, we recently received Jet Brains licences for their all-products pack, certainly to me and possibly Xerkus.
-
-It occurred to me that we should publicly acknowledge this on the website somewhere with a link back to the JetBrains website.
-
-This should make it easier to request renewals and further licences for other team members in the future and at the very least is courteous!  
-
-### Change Renovate config to *bump* dev deps instead of updating the lock
-
-Can we discuss changing the strategy for our org-wide renovate configs to:
-
-```json
-{
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    // .....
-    "packageRules": [
-        // ....
-        {"matchDepTypes": ["require"], "rangeStrategy": "widen"},
-        {"matchDepTypes": ["require-dev"], "rangeStrategy": "bump"}
-    ]
-    // .....
-}
-```
-
-### Article on the Impact of AI Coding Assistants on Frameworks
-
-The article explores the advantages of a minimal, standards-based core like Mezzio, compared to full-stack frameworks.
-AI Coding Assistants generate code just as effectively in both environments, but the bloat in some frameworks can be a significant problem.
-Skeletons like Mezzio are designed to be as small as possible, but also expanded to accommodate the needs of the project.
-
-https://github.com/laminas/getlaminas.org/pull/381
+Nobody has asked for support to be added for PHP 8.5, and I don’t expect this to be the case for 8.6 either.
+Therefore, we should move it to security-only maintenance mode.
+(I wouldn’t mark it as deprecated, as we haven’t yet reached the point where version 4 of laminas-servicemanager is supported [in all related components](https://github.com/laminas/laminas-servicemanager/issues/216).)
